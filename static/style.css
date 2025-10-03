@@ -12,7 +12,6 @@
     --secondary-color: #333;
     --neon-color: #0EF;
 }
-
 body {
     display: flex;
     justify-content: center;
@@ -29,25 +28,19 @@ body {
     width: 400px;
     height: 500px;
     background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
-    border: 5px solid var(--secondary-color);
     border-radius: 10px;
     transition: .5s;
-}
-
-.wrapper:hover {
-    border: 5px solid var(--neon-color);
-    box-shadow: 0 0 20px var(--neon-color), inset 0 0 20px var(--neon-color);
+    /* Animação RGB na borda e sombra */
+    animation: rgb-border-shadow-animation 10s linear infinite;
 }
 
 h2 {
     font-size: 2em;
     text-align: center;
-    color: var(--primary-color);
     transition: 0.5s;
-}
-
-.wrapper:hover h2 {
-    color: var(--neon-color);
+    color: #FFF;
+    /* Animação RGB no texto */
+    /*animation: rgb-text-animation 10s linear infinite;*/
 }
 
 .input-box {
@@ -60,35 +53,27 @@ h2 {
     width: 100%;
     height: 50px;
     background: transparent;
-    border: 2px solid var(--secondary-color);
     outline: none;
     border-radius: 5px;
     font-size: 1em;
     color: var(--primary-color);
     padding: 0 10px 0 35px;
     transition: .5s;
-}
-
-.wrapper:hover .input-box input {
-    border: 2px solid var(--neon-color);
-    box-shadow: 0 0 10px var(--neon-color), inset 0 0 5px var(--neon-color);
+    /* Animação RGB na borda e sombra do input */
+    animation: rgb-input-shadow-animation 10s linear infinite;
 }
 
 .input-box input::placeholder {
-    color: rgba(255, 255, 255, 0.3);
+    color: #FFF;
 }
 
 .input-box .icon {
     position: absolute;
     left: 10px;
-    color: var(--primary-color);
     font-size: 1.2em;
     line-height: 55px;
     transition: .5s;
-}
-
-.wrapper:hover .input-box .icon {
-    color: var(--neon-color);
+    animation: rgb-text-animation 10s linear infinite;
 }
 
 .forgot-pass {
@@ -109,7 +94,6 @@ button {
     position: relative;
     width: 100%;
     height: 45px;
-    background: var(--secondary-color);
     border: none;
     outline: none;
     border-radius: 5px;
@@ -118,12 +102,55 @@ button {
     color: var(--primary-color);
     font-weight: 500;
     transition: .5s;
+    /* Aplica a animação RGB */
+    animation: rgb-animation 10s linear infinite;
 }
 
+/* Removemos a mudança de fundo no hover para não conflitar com a animação,
+   mas podemos, por exemplo, aumentar o brilho ou mudar a cor do texto. */
 .wrapper:hover button {
-    background: var(--neon-color);
-    color: var(--secondary-color);
-    box-shadow: 0 0 10px var(--neon-color), inset 0 0 5px var(--neon-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Definição da animação RGB */
+@keyframes rgb-animation {
+    0%   { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+    20%  { background-color: #ff7f00; box-shadow: 0 0 10px #ff7f00; }
+    40%  { background-color: #ffff00; box-shadow: 0 0 10px #ffff00; }
+    60%  { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
+    80%  { background-color: #0000ff; box-shadow: 0 0 10px #0000ff; }
+    100% { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+}
+
+/* Animação para texto */
+@keyframes rgb-text-animation {
+    0%   { color: #ff0000; }
+    20%  { color: #ff7f00; }
+    40%  { color: #ffff00; }
+    60%  { color: #00ff00; }
+    80%  { color: #0000ff; }
+    100% { color: #ff0000; }
+}
+
+/* Animação para bordas e sombras */
+@keyframes rgb-border-shadow-animation {
+    0%   { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; }
+    20%  { border: 5px solid #ff7f00; box-shadow: 0 0 20px #ff7f00, inset 0 0 10px #ff7f00; }
+    40%  { border: 5px solid #ffff00; box-shadow: 0 0 20px #ffff00, inset 0 0 10px #ffff00; }
+    60%  { border: 5px solid #00ff00; box-shadow: 0 0 20px #00ff00, inset 0 0 10px #00ff00; }
+    80%  { border: 5px solid #0000ff; box-shadow: 0 0 20px #0000ff, inset 0 0 10px #0000ff; }
+    100% { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; }
+}
+
+/* Animação para bordas e sombras do input */
+@keyframes rgb-input-shadow-animation {
+    0%   { border: 2px solid #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
+    20%  { border: 2px solid #ff7f00; box-shadow: 0 0 10px #ff7f00, inset 0 0 5px #ff7f00; }
+    40%  { border: 2px solid #ffff00; box-shadow: 0 0 10px #ffff00, inset 0 0 5px #ffff00; }
+    60%  { border: 2px solid #00ff00; box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00; }
+    80%  { border: 2px solid #0000ff; box-shadow: 0 0 10px #0000ff, inset 0 0 5px #0000ff; }
+    100% { border: 2px solid #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
 }
 
 .register-link {
@@ -137,14 +164,11 @@ button {
 }
 
 .register-link p a {
-    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 600;
     transition: .5s;
-}
-
-.wrapper:hover .register-link p a {
-    color: var(--neon-color);
+    /* Animação RGB no link de registro */
+    animation: rgb-text-animation 10s linear infinite;
 }
 
 .register-link p a:hover {
