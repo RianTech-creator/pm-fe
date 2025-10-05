@@ -5,15 +5,18 @@
 {% endblock %}
 
 {% block header %}
-    <h1>Home</h1>
+    <h1 class="home-title">Home</h1>
 {% endblock %}
 
 {% block content %}
-    Projeto Cantina - Bem-vindo!
-    <p>Este é o sistema de gerenciamento da cantina.</p>
-    <p>Aqui você pode gerenciar produtos, pedidos e muito mais.</p>
-
-    <a href="{% url 'usuario_login' %}">Login</a> | <a href="{% url 'usuario_cadastrar' %}">Registrar</a>
+    <h1 class="descrition-home"> Projeto Cantina - Bem-vindo!
+        <p>Este é o sistema de gerenciamento da cantina.</p>
+        <p>Aqui você pode gerenciar produtos, pedidos e muito mais.</p>
+    </h1>
+    <div class="home-actions">
+        <a href="{% url 'usuario_login' %}" class="btn-animated">Login</a>
+        <a href="{% url 'usuario_cadastrar' %}" class="btn-animated">Registrar</a>
+    </div>
 {% endblock %}
 
 {% block footer %}

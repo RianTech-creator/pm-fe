@@ -7,6 +7,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.home-title {
+    color: var(--primary-color); /* Usando a variável de cor néon */
+    text-align: center; /* Centralizando o título */
+}
+
+.descrition-home {
+    color: var(--primary-color);
+    text-align: center;
+}
+
 :root {
     --primary-color: #FFF;
     --secondary-color: #333;
@@ -18,6 +28,13 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #000;
+}
+
+header {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    left: 30px; /* Distância da direita */
+    z-index: 10; /* Garante que o header fique sobre outros elementos se necessário */
 }
 
 .wrapper {
@@ -173,4 +190,32 @@ button {
 
 .register-link p a:hover {
     text-decoration: underline;
+}
+
+/* Estilos para os botões da home */
+.home-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os botões */
+    margin-top: 30px; /* Espaço acima dos botões */
+    width: 100%;
+}
+
+
+/*botões neon do home*/
+.btn-animated {
+    display: inline-block;
+    width: 150px; /* Largura do botão */
+    height: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none; /* Remove o sublinhado do link */
+    text-align: center;
+    line-height: 45px; /* Alinha o texto verticalmente */
+    transition: .5s;
+    /* Aplica a mesma animação RGB do botão de login */
+    animation: rgb-animation 10s linear infinite;
 }
