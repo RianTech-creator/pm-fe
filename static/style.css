@@ -21,6 +21,7 @@
     --primary-color: #FFF;
     --secondary-color: #333;
     --neon-color: #0EF;
+    --text-shadow-neon: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
 }
 body {
     display: flex;
@@ -28,6 +29,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #000;
+    flex-direction: column; /* Alinha os itens verticalmente */
 }
 
 header {
@@ -199,6 +201,19 @@ button {
     gap: 20px; /* Espaço entre os botões */
     margin-top: 30px; /* Espaço acima dos botões */
     width: 100%;
+}
+
+/* Estilos para o conteúdo da home */
+.home-content {
+    text-align: center;
+    margin-bottom: 30px; /* Espaço entre o texto e os botões */
+}
+
+.descrition-home-p {
+    color: var(--primary-color);
+    margin-top: 10px;
+    font-size: 1.1em;
+    text-shadow: var(--text-shadow-neon);
 }
 
 
