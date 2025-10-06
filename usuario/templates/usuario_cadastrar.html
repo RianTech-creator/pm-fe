@@ -1,35 +1,36 @@
 {% extends 'base.html' %}
 
 {% block title %}
-    Login - Projeto Cantina
+    Cadastro - Projeto Cantina
 {% endblock %}
 
 {% block header %}
-    <h1>Login</h1>
+    <h1>Cadastro</h1>
 {% endblock %}
 
 {% block content %}
-    <form method="POST" action="{{ url_for('usuario_login') }}">
-        {{ form.hidden_tag() }}
-        <div>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}<br>
-            {% for error in form.username.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}<br>
-            {% for error in form.password.errors %}
-                <span style="color: red;">[{{ error }}]</span>
-            {% endfor %}
-        </div>
-        <div>
-            {{ form.submit() }}
-        </div>
-    </form>
-    <p>Não tem uma conta? <a href="{{ url_for('usuario_cadastrar') }}">Cadastre-se aqui</a>.</p>
+    <div class="wrapper">
+        <form method="POST" action="{% url 'usuario_cadastrar' %}">
+            {% csrf_token %}
+            <h2>Cadastro</h2>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-user"></i>
+                </span>
+                <input type="text" name="username" placeholder="Crie um usuário" required>
+            </div>
+            <div class="input-box">
+                <span class="icon">
+                    <i class="fa-solid fa-lock"></i>
+                </span>
+                <input type="password" name="password" placeholder="Crie uma senha" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+            <div class="register-link">
+                <p>Já tem uma conta? <a href="{% url 'usuario_login' %}">Faça o login!</a></p>
+            </div>
+        </form>
+    </div>
 {% endblock %}
 
 {% block footer %}
