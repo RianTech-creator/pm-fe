@@ -17,6 +17,10 @@
     text-align: center;
 }
 
+.credited {
+    color: var(--primary-color);
+}
+
 :root {
     --primary-color: #FFF;
     --secondary-color: #333;
