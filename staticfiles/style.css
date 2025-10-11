@@ -15,11 +15,11 @@
 .descrition-home {
     color: var(--primary-color);
     text-align: center;
+    align-items: center;
 }
 
 .credited {
     color: var(--primary-color);
-    bottom: 20px;
 }
 
 :root {

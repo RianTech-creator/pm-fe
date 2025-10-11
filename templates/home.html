@@ -1,23 +1,32 @@
 {% extends 'base.html' %}
 
+{% block body_class %}
+    home-page-body
+{% endblock %}
+
 {% block title %}
     Projeto Cantina
 {% endblock %}
 
 {% block header %}
-    <h1 class="home-title">Home</h1>
+    <h1 class="home-title">Pedido Digital</h1>
 {% endblock %}
 
 {% block content %}
-    <h1 class="descrition-home"> Projeto Cantina - Bem-vindo!
-        <p>Este é o sistema de gerenciamento da cantina.</p>
-        <p>Aqui você pode gerenciar produtos, pedidos e muito mais.</p>
-    </h1>
+    <div class="descrition-home">
+        <h1>Bem-vindo ao nosso sistema de gerenciamento de pedidos!</h1> <!-- colocar nome do usuario -->
+        <h2>Aqui você pode:</h2>
+        <ul>
+            <li><strong>Ver o cardápio</strong> completo com todos os lanches disponíveis.</li>
+            <li><strong>Fazer pedidos</strong> de forma rápida e fácil, direto pelo portal.</li>
+            <li><strong>Acompanhar seus pedidos</strong> e consultar o histórico de pedidos.</li>
+            <li><strong>Editar seu perfil</strong> e manter seus dados sempre atualizados.</li>
+        </ul>
+    </div>
+    <hr>
     <div class="home-actions">
         <a href="{% url 'usuario_login' %}" class="btn-animated">Login</a>
         <a href="{% url 'usuario_cadastrar' %}" class="btn-animated">Cadastrar-se</a>
-
-        
     </div>
 {% endblock %}
 
