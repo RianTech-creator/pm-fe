@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body_class %}
+    painel-page-body
+{% endblock %}
+
+{% block title %}
+    Painel do Aluno - Projeto Cantina
+{% endblock %}
+
+{% block header %}
+    <h3 class="painel-title">Painel do Aluno - Projeto Cantina</h3>
+{% endblock %}
+
+{% block main %}
+<div class="painel-container">
+    <h2>Bem-vindo ao seu painel, {{ user.get_full_name|default:user.username }}!</h2>
+    <p>O que você deseja fazer?</p>
+</div>
+<div class="painel-buttons">
+    <a href="{% url '' %}" class="btn-animated"></a>
+</div
+{% endblock %}
+
+
+{% block content %}
+
+{% endblock %}
+
+{% block footer %}
+    Projeto Cantina - 2024
+{% endblock %}

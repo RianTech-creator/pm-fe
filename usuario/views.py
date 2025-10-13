@@ -2,22 +2,30 @@ from django.shortcuts import render
 from django.contrib.auth import login, authenticate
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt # REMOVER DA PRODUÇÃO - USAR EM DEBUG APENAS
+from django.contrib.auth.models import User
+from .models import Usuario
 
 # Create your views here.
 def home_view(request):
     return render(request, 'home.html')
 
+def usuario_painel(request):
+    return render(request, 'usuario_painel.html')
+
 @csrf_exempt  # REMOVER DA PRODUÇÃO - USAR EM DEBUG APENAS
 def usuario_login(request):
     if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-        user = authenticate(request, username=username, password=password)
-        if user is not None:
-            login(request, user)
-            return redirect('home')
-        else:
-            return render(request, 'login.html', {'error': 'Credenciais inválidas'})
+         if request.method == 'POST':
+            user = User()
+            user.username = 'teste'
+            user.email = 'user@email.com'
+            user.set_password('senha123')
+
+            usuario = Usuario()
+            usuario.user = user
+            usuario.role = 'cantineiro'
+            usuario.username = 'Nome do Usuario'
+            return render(request, 'usuario_painel.html', {'usuario': usuario})
     return render(request, 'usuario_login.html')
 
 def usuario_cadastrar(request):

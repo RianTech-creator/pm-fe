@@ -12,10 +12,26 @@
     text-align: center; /* Centralizando o título */
 }
 
+
+
 .descrition-home {
     color: var(--primary-color);
     text-align: center;
     align-items: center;
+}
+
+.descrition-home h1 {
+    color: var(--primary-color);
+    text-align: center;
+    align-items: center;
+    top: -20px;
+}
+
+.descrition-home h2 {
+    color: var(--primary-color);
+    text-align: center;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .credited {
@@ -37,6 +53,16 @@ body {
     flex-direction: column; /* Alinha os itens verticalmente */
 }
 
+/* Aplica a borda RGB apenas no body da página home */
+.home-page-body {
+    animation: rgb-screen-border-animation 20s linear infinite;
+}
+
+.painel-page-body {
+    animation: rgb-screen-border-animation 20s linear infinite;
+}
+
+
 header {
     position: absolute;
     top: 20px; /* Distância do topo */
@@ -55,7 +81,7 @@ header {
     border-radius: 10px;
     transition: .5s;
     /* Animação RGB na borda e sombra */
-    animation: rgb-border-shadow-animation 10s linear infinite;
+    animation: rgb-border-shadow-animation 20s linear infinite;
 }
 
 h2 {
@@ -84,7 +110,7 @@ h2 {
     padding: 0 10px 0 35px;
     transition: .5s;
     /* Animação RGB na borda e sombra do input */
-    animation: rgb-input-shadow-animation 10s linear infinite;
+    animation: rgb-input-shadow-animation 20s linear infinite;
 }
 
 .input-box input::placeholder {
@@ -97,7 +123,7 @@ h2 {
     font-size: 1.2em;
     line-height: 55px;
     transition: .5s;
-    animation: rgb-text-animation 10s linear infinite;
+    animation: rgb-text-animation 20s linear infinite;
 }
 
 .forgot-pass {
@@ -127,7 +153,7 @@ button {
     font-weight: 500;
     transition: .5s;
     /* Aplica a animação RGB */
-    animation: rgb-animation 10s linear infinite;
+    animation: rgb-animation 20s linear infinite;
 }
 
 /* Removemos a mudança de fundo no hover para não conflitar com a animação,
@@ -177,6 +203,16 @@ button {
     100% { border: 2px solid #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
 }
 
+/* Animação para a borda da tela (sem sombra interna) */
+@keyframes rgb-screen-border-animation {
+    0%   { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000; }
+    20%  { border: 5px solid #ff7f00; box-shadow: 0 0 20px #ff7f00; }
+    40%  { border: 5px solid #ffff00; box-shadow: 0 0 20px #ffff00; }
+    60%  { border: 5px solid #00ff00; box-shadow: 0 0 20px #00ff00; }
+    80%  { border: 5px solid #0000ff; box-shadow: 0 0 20px #0000ff; }
+    100% { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000; }
+}
+
 .register-link {
     font-size: 0.9em;
     text-align: center;
@@ -192,7 +228,7 @@ button {
     font-weight: 600;
     transition: .5s;
     /* Animação RGB no link de registro */
-    animation: rgb-text-animation 10s linear infinite;
+    animation: rgb-text-animation 20s linear infinite;
 }
 
 .register-link p a:hover {
@@ -237,5 +273,48 @@ button {
     line-height: 45px; /* Alinha o texto verticalmente */
     transition: .5s;
     /* Aplica a mesma animação RGB do botão de login */
-    animation: rgb-animation 10s linear infinite;
+    animation: rgb-animation 20s linear infinite;
+}
+
+/* Estilos para o Painel do Usuário */
+.painel-container {
+    background: #0c0c0c; /* Um fundo escuro, mas diferente do body */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    color: var(--primary-color);
+    width: 90%;
+    max-width: 600px;
+    /* Animação de borda similar ao wrapper do login */
+    animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+.painel-container h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Garante que o H2 seja branco */
+    font-size: 2.2em;
+}
+
+.painel-container p {
+    margin-bottom: 30px;
+    color: var(--primary-color); /* Garante que o parágrafo seja branco */
+    font-size: 1.1em;
+}
+
+.painel-container ul {
+    list-style: none; /* Remove os marcadores da lista */
+}
+
+.painel-container li {
+    margin-bottom: 15px; /* Espaçamento entre os botões */
+}
+
+/* Estilo específico para os botões dentro do painel */
+.painel-container a button {
+    /* Você pode manter a animação ou definir uma cor de fundo estática */
+    animation: rgb-animation 20s linear infinite;
+    /* Garante que o texto do botão seja branco */
+    color: var(--primary-color);
+    /* Adiciona largura para que todos os botões tenham o mesmo tamanho */
+    width: 100%;
 }
