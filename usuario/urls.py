@@ -11,4 +11,5 @@ urlpatterns = [
     path('listar/', home_view, name='listar_pedidos'),
     path('criar/', home_view, name='criar_pedidos'),
     path('historico/', home_view, name='historico_pedidos'),
+    path('logout/', views.logout_usuario, name='logout_usuario'),
 ]

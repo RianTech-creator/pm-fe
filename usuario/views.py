@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.contrib.auth import login, authenticate
+from django.contrib.auth import login, authenticate, logout
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt # REMOVER DA PRODUÇÃO - USAR EM DEBUG APENAS
 from django.contrib.auth.models import User
@@ -11,6 +11,13 @@ def home_view(request):
 
 def usuario_painel(request):
     return render(request, 'usuario_painel.html')
+
+def logout_usuario(request):
+    """
+    Encerra a sessão do usuário.
+    """
+    logout(request)
+    return redirect('home')
 
 @csrf_exempt  # REMOVER DA PRODUÇÃO - USAR EM DEBUG APENAS
 def usuario_login(request):

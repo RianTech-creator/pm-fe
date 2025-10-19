@@ -1,326 +1,411 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 .home-title {
-    color: var(--primary-color); /* Usando a variável de cor néon */
-    text-align: center; /* Centralizando o título */
+  color: var(--primary-color); /* Usando a variável de cor néon */
+  text-align: center; /* Centralizando o título */
 }
 
-
-
 .descrition-home {
-    color: var(--primary-color);
-    text-align: center;
-    align-items: center;
+  color: var(--primary-color);
+  text-align: center;
+  align-items: center;
 }
 
 .descrition-home h1 {
-    color: var(--primary-color);
-    text-align: center;
-    align-items: center;
-    top: -20px;
+  color: var(--primary-color);
+  text-align: center;
+  align-items: center;
+  top: -20px;
 }
 
 .descrition-home h2 {
-    color: var(--primary-color);
-    text-align: center;
-    align-items: center;
-    margin-bottom: 15px;
+  color: var(--primary-color);
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .credited {
-    color: var(--primary-color);
-}
-
-:root {
-    --primary-color: #FFF;
-    --secondary-color: #333;
-    --neon-color: #0EF;
-    --text-shadow-neon: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
-}
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #000;
-    flex-direction: column; /* Alinha os itens verticalmente */
+  color: var(--primary-color);
 }
 
 /* Aplica a borda RGB apenas no body da página home */
 .home-page-body {
-    animation: rgb-screen-border-animation 20s linear infinite;
+  animation: rgb-screen-border-animation 20s linear infinite;
 }
 
+/* Estilos para os botões da home */
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 30px; /* Espaço acima dos botões */
+  width: 100%;
+}
+
+/* Estilos para o conteúdo da home */
+.home-content {
+  text-align: center;
+  margin-bottom: 30px; /* Espaço entre o texto e os botões */
+}
+
+.descrition-home-p {
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-size: 1.1em;
+  text-shadow: var(--text-shadow-neon);
+}
+
+/*botões neon do home*/
+.btn-animated {
+  display: inline-block;
+  width: 150px; /* Largura do botão */
+  height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none; /* Remove o sublinhado do link */
+  text-align: center;
+  line-height: 45px; /* Alinha o texto verticalmente */
+  transition: 0.5s;
+  /* Aplica a mesma animação RGB do botão de login */
+  animation: rgb-animation 20s linear infinite;
+}
+
+/* Estilos para o Painel do Usuário */
+.painel-title {
+  color: var(--primary-color); /* Usando a variável de cor néon */
+  text-align: center; /* Centralizando o título */
+}
+
+.painel-container {
+  background: #000; /* Um fundo escuro, mas diferente do body */
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  color: var(--primary-color);
+  width: 90%;
+  max-width: 600px;
+  /* Animação de borda similar ao wrapper do login */
+  animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+.painel-container h1 {
+  color: var(--primary-color);
+  text-align: center;
+  align-items: center;
+  top: -20px;
+}
+
+.painel-container p {
+  margin-bottom: 30px;
+  color: var(--primary-color); /* Garante que o parágrafo seja branco */
+  font-size: 1.1em;
+}
+
+
+.painel-buttons a {
+  margin-bottom: 7px; 
+}
+
+.painel-container li {
+  margin-bottom: 15px; /* Espaçamento entre os botões */
+}
+
+
 .painel-page-body {
-    animation: rgb-screen-border-animation 20s linear infinite;
+  animation: rgb-screen-border-animation 20s linear infinite;
+}
+
+
+
+.painel-credited {
+  color: var(--primary-color);
+  margin-right: 45px;
+  margin-top: 10px;
+}
+
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #333;
+  --neon-color: #0ef;
+  --text-shadow-neon: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+  flex-direction: column; /* Alinha os itens verticalmente */
 }
 
 
 header {
-    position: absolute;
-    top: 20px; /* Distância do topo */
-    left: 30px; /* Distância da direita */
-    z-index: 10; /* Garante que o header fique sobre outros elementos se necessário */
+  position: absolute;
+  top: 20px; /* Distância do topo */
+  left: 30px; /* Distância da direita */
+  z-index: 10; /* Garante que o header fique sobre outros elementos se necessário */
 }
 
+
 .wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    height: 500px;
-    background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
-    border-radius: 10px;
-    transition: .5s;
-    /* Animação RGB na borda e sombra */
-    animation: rgb-border-shadow-animation 20s linear infinite;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
+  border-radius: 10px;
+  transition: 0.5s;
+  /* Animação RGB na borda e sombra */
+  animation: rgb-border-shadow-animation 20s linear infinite;
 }
 
 h2 {
-    font-size: 2em;
-    text-align: center;
-    transition: 0.5s;
-    color: #FFF;
-    /* Animação RGB no texto */
-    /*animation: rgb-text-animation 10s linear infinite;*/
+  font-size: 2em;
+  text-align: center;
+  transition: 0.5s;
+  color: #fff;
+  /* Animação RGB no texto */
+  /*animation: rgb-text-animation 10s linear infinite;*/
 }
 
 .input-box {
-    position: relative;
-    width: 320px;
-    margin: 30px 0;
+  position: relative;
+  width: 320px;
+  margin: 30px 0;
 }
 
 .input-box input {
-    width: 100%;
-    height: 50px;
-    background: transparent;
-    outline: none;
-    border-radius: 5px;
-    font-size: 1em;
-    color: var(--primary-color);
-    padding: 0 10px 0 35px;
-    transition: .5s;
-    /* Animação RGB na borda e sombra do input */
-    animation: rgb-input-shadow-animation 20s linear infinite;
+  width: 100%;
+  height: 50px;
+  background: transparent;
+  outline: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: var(--primary-color);
+  padding: 0 10px 0 35px;
+  transition: 0.5s;
+  /* Animação RGB na borda e sombra do input */
+  animation: rgb-input-shadow-animation 20s linear infinite;
 }
 
 .input-box input::placeholder {
-    color: #FFF;
+  color: #fff;
 }
 
 .input-box .icon {
-    position: absolute;
-    left: 10px;
-    font-size: 1.2em;
-    line-height: 55px;
-    transition: .5s;
-    animation: rgb-text-animation 20s linear infinite;
+  position: absolute;
+  left: 10px;
+  font-size: 1.2em;
+  line-height: 55px;
+  transition: 0.5s;
+  animation: rgb-text-animation 20s linear infinite;
 }
 
 .forgot-pass {
-    margin: -15px 0 15px;
+  margin: -15px 0 15px;
 }
 
 .forgot-pass a {
-    color: var(--primary-color);
-    font-size: 0.9em;
-    text-decoration: none;
+  color: var(--primary-color);
+  font-size: 0.9em;
+  text-decoration: none;
 }
 
 .forgot-pass a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 button {
-    position: relative;
-    width: 100%;
-    height: 45px;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    color: var(--primary-color);
-    font-weight: 500;
-    transition: .5s;
-    /* Aplica a animação RGB */
-    animation: rgb-animation 20s linear infinite;
+  position: relative;
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--primary-color);
+  font-weight: 500;
+  transition: 0.5s;
+  /* Aplica a animação RGB */
+  animation: rgb-animation 20s linear infinite;
 }
 
 /* Removemos a mudança de fundo no hover para não conflitar com a animação,
    mas podemos, por exemplo, aumentar o brilho ou mudar a cor do texto. */
 .wrapper:hover button {
-    color: var(--primary-color);
-    font-weight: 600;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 /* Definição da animação RGB */
 @keyframes rgb-animation {
-    0%   { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
-    20%  { background-color: #ff7f00; box-shadow: 0 0 10px #ff7f00; }
-    40%  { background-color: #ffff00; box-shadow: 0 0 10px #ffff00; }
-    60%  { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
-    80%  { background-color: #0000ff; box-shadow: 0 0 10px #0000ff; }
-    100% { background-color: #ff0000; box-shadow: 0 0 10px #ff0000; }
+  0% {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+  }
+  20% {
+    background-color: #ff7f00;
+    box-shadow: 0 0 10px #ff7f00;
+  }
+  40% {
+    background-color: #ffff00;
+    box-shadow: 0 0 10px #ffff00;
+  }
+  60% {
+    background-color: #00ff00;
+    box-shadow: 0 0 10px #00ff00;
+  }
+  80% {
+    background-color: #0000ff;
+    box-shadow: 0 0 10px #0000ff;
+  }
+  100% {
+    background-color: #ff0000;
+    box-shadow: 0 0 10px #ff0000;
+  }
 }
 
 /* Animação para texto */
 @keyframes rgb-text-animation {
-    0%   { color: #ff0000; }
-    20%  { color: #ff7f00; }
-    40%  { color: #ffff00; }
-    60%  { color: #00ff00; }
-    80%  { color: #0000ff; }
-    100% { color: #ff0000; }
+  0% {
+    color: #ff0000;
+  }
+  20% {
+    color: #ff7f00;
+  }
+  40% {
+    color: #ffff00;
+  }
+  60% {
+    color: #00ff00;
+  }
+  80% {
+    color: #0000ff;
+  }
+  100% {
+    color: #ff0000;
+  }
 }
 
 /* Animação para bordas e sombras */
 @keyframes rgb-border-shadow-animation {
-    0%   { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; }
-    20%  { border: 5px solid #ff7f00; box-shadow: 0 0 20px #ff7f00, inset 0 0 10px #ff7f00; }
-    40%  { border: 5px solid #ffff00; box-shadow: 0 0 20px #ffff00, inset 0 0 10px #ffff00; }
-    60%  { border: 5px solid #00ff00; box-shadow: 0 0 20px #00ff00, inset 0 0 10px #00ff00; }
-    80%  { border: 5px solid #0000ff; box-shadow: 0 0 20px #0000ff, inset 0 0 10px #0000ff; }
-    100% { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000; }
+  0% {
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+  }
+  20% {
+    border: 5px solid #ff7f00;
+    box-shadow: 0 0 20px #ff7f00, inset 0 0 10px #ff7f00;
+  }
+  40% {
+    border: 5px solid #ffff00;
+    box-shadow: 0 0 20px #ffff00, inset 0 0 10px #ffff00;
+  }
+  60% {
+    border: 5px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00, inset 0 0 10px #00ff00;
+  }
+  80% {
+    border: 5px solid #0000ff;
+    box-shadow: 0 0 20px #0000ff, inset 0 0 10px #0000ff;
+  }
+  100% {
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+  }
 }
 
 /* Animação para bordas e sombras do input */
 @keyframes rgb-input-shadow-animation {
-    0%   { border: 2px solid #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
-    20%  { border: 2px solid #ff7f00; box-shadow: 0 0 10px #ff7f00, inset 0 0 5px #ff7f00; }
-    40%  { border: 2px solid #ffff00; box-shadow: 0 0 10px #ffff00, inset 0 0 5px #ffff00; }
-    60%  { border: 2px solid #00ff00; box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00; }
-    80%  { border: 2px solid #0000ff; box-shadow: 0 0 10px #0000ff, inset 0 0 5px #0000ff; }
-    100% { border: 2px solid #ff0000; box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000; }
+  0% {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000;
+  }
+  20% {
+    border: 2px solid #ff7f00;
+    box-shadow: 0 0 10px #ff7f00, inset 0 0 5px #ff7f00;
+  }
+  40% {
+    border: 2px solid #ffff00;
+    box-shadow: 0 0 10px #ffff00, inset 0 0 5px #ffff00;
+  }
+  60% {
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00;
+  }
+  80% {
+    border: 2px solid #0000ff;
+    box-shadow: 0 0 10px #0000ff, inset 0 0 5px #0000ff;
+  }
+  100% {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000;
+  }
 }
 
 /* Animação para a borda da tela (sem sombra interna) */
 @keyframes rgb-screen-border-animation {
-    0%   { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000; }
-    20%  { border: 5px solid #ff7f00; box-shadow: 0 0 20px #ff7f00; }
-    40%  { border: 5px solid #ffff00; box-shadow: 0 0 20px #ffff00; }
-    60%  { border: 5px solid #00ff00; box-shadow: 0 0 20px #00ff00; }
-    80%  { border: 5px solid #0000ff; box-shadow: 0 0 20px #0000ff; }
-    100% { border: 5px solid #ff0000; box-shadow: 0 0 20px #ff0000; }
+  0% {
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+  }
+  20% {
+    border: 5px solid #ff7f00;
+    box-shadow: 0 0 20px #ff7f00;
+  }
+  40% {
+    border: 5px solid #ffff00;
+    box-shadow: 0 0 20px #ffff00;
+  }
+  60% {
+    border: 5px solid #00ff00;
+    box-shadow: 0 0 20px #00ff00;
+  }
+  80% {
+    border: 5px solid #0000ff;
+    box-shadow: 0 0 20px #0000ff;
+  }
+  100% {
+    border: 5px solid #ff0000;
+    box-shadow: 0 0 20px #ff0000;
+  }
 }
 
 .register-link {
-    font-size: 0.9em;
-    text-align: center;
-    margin: 25px 0;
+  font-size: 0.9em;
+  text-align: center;
+  margin: 25px 0;
 }
 
 .register-link p {
-    color: var(--primary-color);
+  color: var(--primary-color);
 }
 
 .register-link p a {
-    text-decoration: none;
-    font-weight: 600;
-    transition: .5s;
-    /* Animação RGB no link de registro */
-    animation: rgb-text-animation 20s linear infinite;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.5s;
+  /* Animação RGB no link de registro */
+  animation: rgb-text-animation 20s linear infinite;
 }
 
 .register-link p a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-/* Estilos para os botões da home */
-.home-actions {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espaço entre os botões */
-    margin-top: 30px; /* Espaço acima dos botões */
-    width: 100%;
-}
-
-/* Estilos para o conteúdo da home */
-.home-content {
-    text-align: center;
-    margin-bottom: 30px; /* Espaço entre o texto e os botões */
-}
-
-.descrition-home-p {
-    color: var(--primary-color);
-    margin-top: 10px;
-    font-size: 1.1em;
-    text-shadow: var(--text-shadow-neon);
-}
-
-
-/*botões neon do home*/
-.btn-animated {
-    display: inline-block;
-    width: 150px; /* Largura do botão */
-    height: 45px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    color: var(--primary-color);
-    font-weight: 500;
-    text-decoration: none; /* Remove o sublinhado do link */
-    text-align: center;
-    line-height: 45px; /* Alinha o texto verticalmente */
-    transition: .5s;
-    /* Aplica a mesma animação RGB do botão de login */
-    animation: rgb-animation 20s linear infinite;
-}
-
-/* Estilos para o Painel do Usuário */
-.painel-title {
-    color: var(--primary-color); /* Usando a variável de cor néon */
-    text-align: center; /* Centralizando o título */
-    margin-bottom: 20px;
-}
-
-.painel-container {
-    background: #0c0c0c; /* Um fundo escuro, mas diferente do body */
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    color: var(--primary-color);
-    width: 90%;
-    max-width: 600px;
-    /* Animação de borda similar ao wrapper do login */
-    animation: rgb-border-shadow-animation 20s linear infinite;
-}
-
-.painel-container h2 {
-    margin-bottom: 15px;
-    color: var(--primary-color); /* Garante que o H2 seja branco */
-    font-size: 2.2em;
-}
-
-.painel-container p {
-    margin-bottom: 30px;
-    color: var(--primary-color); /* Garante que o parágrafo seja branco */
-    font-size: 1.1em;
-}
-
-.painel-container ul {
-    list-style: none; /* Remove os marcadores da lista */
-}
-
-.painel-container li {
-    margin-bottom: 15px; /* Espaçamento entre os botões */
-}
-
-/* Estilo específico para os botões dentro do painel */
-.painel-container a button {
-    /* Você pode manter a animação ou definir uma cor de fundo estática */
-    animation: rgb-animation 20s linear infinite;
-    /* Garante que o texto do botão seja branco */
-    color: var(--primary-color);
-    /* Adiciona largura para que todos os botões tenham o mesmo tamanho */
-    width: 100%;
-}
