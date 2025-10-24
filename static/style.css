@@ -93,8 +93,8 @@
   border-radius: 10px;
   text-align: center;
   color: var(--primary-color);
-  width: 90%;
-  max-width: 600px;
+  width: center;
+  max-width: 380px;
   /* Animação de borda similar ao wrapper do login */
   animation: rgb-border-shadow-animation 20s linear infinite;
 }
@@ -128,12 +128,11 @@
 
 
 
-.painel-credited {
+.painel-credited { /* Corrected selector to target the h4 directly */
   color: var(--primary-color);
-  margin-right: 45px;
   margin-top: 10px;
+  text-align: center; /* Correct property for centering text */
 }
-
 
 :root {
   --primary-color: #fff;
@@ -409,3 +408,12 @@ button {
   text-decoration: underline;
 }
 
+/* Media query para telas de celular (até 600px de largura) */
+@media (max-width: 600px) {
+  /* Remove a borda animada nos painéis e formulários em telas pequenas */
+  .painel-container, .wrapper {
+    animation: none; /* Remove a animação da borda */
+    border: none; /* Garante que não haja borda */
+    box-shadow: none; /* Garante que não haja sombra */
+  }
+}

@@ -34,10 +34,106 @@
 
 .credited {
   color: var(--primary-color);
+}
+
+/* Aplica a borda RGB apenas no body da página home */
+.home-page-body {
+  animation: rgb-screen-border-animation 20s linear infinite;
+}
+
+/* Estilos para os botões da home */
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Espaço entre os botões */
+  margin-top: 30px; /* Espaço acima dos botões */
+  width: 100%;
+}
+
+/* Estilos para o conteúdo da home */
+.home-content {
+  text-align: center;
+  margin-bottom: 30px; /* Espaço entre o texto e os botões */
+}
+
+.descrition-home-p {
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-size: 1.1em;
+  text-shadow: var(--text-shadow-neon);
+}
+
+/*botões neon do home*/
+.btn-animated {
+  display: inline-block;
+  width: 150px; /* Largura do botão */
+  height: 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: none; /* Remove o sublinhado do link */
+  text-align: center;
+  line-height: 45px; /* Alinha o texto verticalmente */
+  transition: 0.5s;
+  /* Aplica a mesma animação RGB do botão de login */
+  animation: rgb-animation 20s linear infinite;
+}
+
+/* Estilos para o Painel do Usuário */
+.painel-title {
+  color: var(--primary-color); /* Usando a variável de cor néon */
+  text-align: center; /* Centralizando o título */
+}
+
+.painel-container {
+  background: #000; /* Um fundo escuro, mas diferente do body */
+  padding: 40px;
+  border-radius: 30px;
+  text-align: center;
+  color: var(--secondary-color);
+  width: 90%;
+  max-width: 600px;
+  /* Animação de borda similar ao wrapper do login */
+  animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+.painel-container h1 {
+  color: var(--primary-color);
   text-align: center;
   align-items: center;
-  margin-bottom: 15px;
+  top: -20px;
 }
+
+.painel-container p {
+  margin-bottom: 30px;
+  color: var(--primary-color); /* Garante que o parágrafo seja branco */
+  font-size: 1.1em;
+}
+
+
+.painel-buttons a {
+  margin-bottom: 7px; 
+}
+
+.painel-container li {
+  margin-bottom: 15px; /* Espaçamento entre os botões */
+}
+
+
+.painel-page-body {
+  animation: rgb-screen-border-animation 20s linear infinite;
+}
+
+
+
+.painel-credited {
+  color: var(--primary-color);
+  margin-right: 45px;
+  margin-top: 10px;
+}
+
 
 :root {
   --primary-color: #fff;
@@ -55,14 +151,6 @@ body {
   flex-direction: column; /* Alinha os itens verticalmente */
 }
 
-/* Aplica a borda RGB apenas no body da página home */
-.home-page-body {
-  animation: rgb-screen-border-animation 20s linear infinite;
-}
-
-.painel-page-body {
-  animation: rgb-screen-border-animation 20s linear infinite;
-}
 
 header {
   position: absolute;
@@ -320,103 +408,4 @@ button {
 .register-link p a:hover {
   text-decoration: underline;
 }
-
-/* Estilos para os botões da home */
-.home-actions {
-  display: flex;
-  justify-content: center;
-  gap: 20px; /* Espaço entre os botões */
-  margin-top: 30px; /* Espaço acima dos botões */
-  width: 100%;
-}
-
-/* Estilos para o conteúdo da home */
-.home-content {
-  text-align: center;
-  margin-bottom: 30px; /* Espaço entre o texto e os botões */
-}
-
-.descrition-home-p {
-  color: var(--primary-color);
-  margin-top: 10px;
-  font-size: 1.1em;
-  text-shadow: var(--text-shadow-neon);
-}
-
-/*botões neon do home*/
-.btn-animated {
-  display: inline-block;
-  width: 150px; /* Largura do botão */
-  height: 45px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-  color: var(--primary-color);
-  font-weight: 500;
-  text-decoration: none; /* Remove o sublinhado do link */
-  text-align: center;
-  line-height: 45px; /* Alinha o texto verticalmente */
-  transition: 0.5s;
-  /* Aplica a mesma animação RGB do botão de login */
-  animation: rgb-animation 20s linear infinite;
-}
-
-/* Estilos para o Painel do Usuário */
-.painel-title {
-  color: var(--primary-color); /* Usando a variável de cor néon */
-  text-align: center; /* Centralizando o título */
-}
-
-.painel-container {
-  background: #0c0c0c; /* Um fundo escuro, mas diferente do body */
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
-  color: var(--primary-color);
-  width: 90%;
-  max-width: 600px;
-  /* Animação de borda similar ao wrapper do login */
-  animation: rgb-border-shadow-animation 20s linear infinite;
-}
-
-.painel-container h1 {
-  color: var(--primary-color);
-  text-align: center;
-  align-items: center;
-  top: -20px;
-}
-
-.painel-container p {
-  margin-bottom: 30px;
-  color: var(--primary-color); /* Garante que o parágrafo seja branco */
-  font-size: 1.1em;
-}
-
-.painel-container ul {
-  list-style: none; /* Remove os marcadores da lista */
-}
-
-.painel-container li {
-  margin-bottom: 15px; /* Espaçamento entre os botões */
-}
-
-/* Estilo específico para os botões dentro do painel */
-
-
-/* Estilos para o layout do painel com sidebar */
-
-.sidebar {
-    width: 150px; /* Largura da sidebar */
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha os botões à esquerda */
-}
-/* Espaçamento entre os icones*/
-.sidebar a {
-    margin-bottom: 10px;
-    width: 100%; /* Faz os botões ocuparem toda a largura da sidebar */
-}
-
-
 
