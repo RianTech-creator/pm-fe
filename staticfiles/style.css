@@ -41,6 +41,11 @@
   animation: rgb-screen-border-animation 20s linear infinite;
 }
 
+/* Aplica a borda RGB no body das páginas de login e cadastro */
+.login-register-body {
+  animation: rgb-screen-border-animation 20s linear infinite;
+}
+
 /* Estilos para os botões da home */
 .home-actions {
   display: flex;
@@ -408,4 +413,3 @@ button {
 .register-link p a:hover {
   text-decoration: underline;
 }
-

@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrinho</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <div class="cart-panel">
+{% extends 'base.html' %}
+
+{% block body_class %}
+    cart-page-body
+{% endblock %}
+
+{% block title %}
+    Carrinho de Compras - Projeto Cantina
+{% endblock %}
+
+{% block content %}
+    <div class="carrinho-container">
         <h1>Carrinho</h1>
         <div class="product-list">
             <div class="product-item">
@@ -28,12 +29,11 @@
             </div>
         </div>
         <div class="total-value">
-            Valor Total R$ 45,00
+            Valor Total: R$ 45,00
         </div>
-        <div class="buttons">
+        <div class="carrinho-buttons">
             <button>Finalizar pedido</button>
             <button>Editar Pedido</button>
-        </div>
+        </div>        
     </div>
-</body>
-</html>
+{% endblock %}
