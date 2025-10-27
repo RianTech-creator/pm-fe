@@ -42,3 +42,6 @@ def criar_pedidos(request):
 @login_required(login_url='login_usuario')
 def historico_pedidos(request):
     return render(request, 'historico_pedidos.html')
+
+def carrinho(request):
+    return render(request, 'carrinho.html')
