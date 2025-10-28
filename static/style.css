@@ -63,6 +63,15 @@
   text-shadow: var(--text-shadow-neon);
 }
 
+.login-register-body {
+  animation: rgb-screen-border-animation 7s linear infinite;
+  
+}
+
+.title-cadastro {
+  color: var(--secondary-color);
+}
+
 /*botões neon do home*/
 .btn-animated {
   display: inline-block;
@@ -147,6 +156,8 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #00aeff;
+  border-style: solid; /* Adiciona um estilo de borda sólido */
+  border-width: 5px;   /* Define a largura da borda */
   flex-direction: column; /* Alinha os itens verticalmente */
 }
 
@@ -161,12 +172,13 @@ header {
 
 .wrapper {
   position: relative;
+  color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 500px;
-  background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
+  background: var(--primary-color); 
   border-radius: 10px;
   transition: 0.5s;
   /* Animação RGB na borda e sombra */
@@ -184,7 +196,7 @@ h2 {
 
 .input-box {
   position: relative;
-  width: 320px;
+  width: 100%; /* Faz o input-box ocupar a mesma largura do botão */
   margin: 30px 0;
 }
 
@@ -195,24 +207,25 @@ h2 {
   outline: none;
   border-radius: 5px;
   font-size: 1em;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 0 10px 0 35px;
   transition: 0.5s;
   /* Animação RGB na borda e sombra do input */
-  animation: rgb-input-shadow-animation 20s linear infinite;
+  animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 .input-box input::placeholder {
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .input-box .icon {
   position: absolute;
   left: 10px;
+  right: 5px;
   font-size: 1.2em;
   line-height: 55px;
   transition: 0.5s;
-  animation: rgb-text-animation 20s linear infinite;
+  color: var(--secondary-color);
 }
 
 .forgot-pass {
@@ -242,7 +255,7 @@ button {
   font-weight: 500;
   transition: 0.5s;
   /* Aplica a animação RGB */
-  animation: rgb-animation 20s linear infinite;
+  animation: rgb-animation 7s linear infinite;
 }
 
 /* Removemos a mudança de fundo no hover para não conflitar com a animação,
@@ -287,6 +300,23 @@ button {
     color: #007BFF; /* Azul */
   }
 }
+
+/* Nova animação para texto que corresponde à animação da borda */
+@keyframes rgb-border-text-animation {
+  0% {
+    color: #007BFF; /* Azul */
+  }
+  33% {
+    color: #003366; /* Azul Escuro */
+  }
+  67% {
+    color: #000000; /* Preto */
+  }
+  100% {
+    color: #007BFF; /* Azul */
+  }
+}
+
 
 /* Animação para bordas e sombras */
 @keyframes rgb-border-shadow-animation {
@@ -355,7 +385,7 @@ button {
 }
 
 .register-link p {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .register-link p a {
@@ -363,7 +393,8 @@ button {
   font-weight: 600;
   transition: 0.5s;
   /* Animação RGB no link de registro */
-  animation: rgb-text-animation 20s linear infinite;
+  
+  animation: rgb-border-text-animation 7s linear infinite;
 }
 
 .register-link p a:hover {
@@ -380,12 +411,9 @@ button {
   }
 }
 
-/* --- Estilos da Página do Carrinho --- */
-
-/* Sobrescreve o body para a página do carrinho, removendo o tema neon */
 /* A animação foi reativada, mas agora com o tema azul */
 .cart-page-body {
-    background-color: #c2c2c2 !important; /* Fundo preto para a animação de borda se destacar */
+    background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
     font-family: "Poppins", sans-serif !important;
     animation: rgb-screen-border-animation 10s linear infinite;
 }

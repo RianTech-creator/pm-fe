@@ -8,42 +8,37 @@
 }
 
 .home-title {
-  color: var(--primary-color); /* Usando a variável de cor néon */
+  color: var(--secondary-color); /* Usando a variável de cor néon */
   text-align: center; /* Centralizando o título */
 }
 
 .descrition-home {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   align-items: center;
 }
 
 .descrition-home h1 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   align-items: center;
   top: -20px;
 }
 
 .descrition-home h2 {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   text-align: center;
   align-items: center;
   margin-bottom: 15px;
 }
 
 .credited {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 /* Aplica a borda RGB apenas no body da página home */
 .home-page-body {
-  animation: rgb-screen-border-animation 20s linear infinite;
-}
-
-/* Aplica a borda RGB no body das páginas de login e cadastro */
-.login-register-body {
-  animation: rgb-screen-border-animation 20s linear infinite;
+  animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 /* Estilos para os botões da home */
@@ -62,10 +57,19 @@
 }
 
 .descrition-home-p {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-top: 10px;
   font-size: 1.1em;
   text-shadow: var(--text-shadow-neon);
+}
+
+.login-register-body {
+  animation: rgb-screen-border-animation 7s linear infinite;
+  
+}
+
+.title-cadastro {
+  color: var(--secondary-color);
 }
 
 /*botões neon do home*/
@@ -83,7 +87,7 @@
   line-height: 45px; /* Alinha o texto verticalmente */
   transition: 0.5s;
   /* Aplica a mesma animação RGB do botão de login */
-  animation: rgb-animation 20s linear infinite;
+  animation: rgb-animation 7s linear infinite;
 }
 
 /* Estilos para o Painel do Usuário */
@@ -95,11 +99,11 @@
 .painel-container {
   background: #000; /* Um fundo escuro, mas diferente do body */
   padding: 40px;
-  border-radius: 30px;
+  border-radius: 10px;
   text-align: center;
-  color: var(--secondary-color);
-  width: 90%;
-  max-width: 600px;
+  color: var(--primary-color);
+  width: center;
+  max-width: 380px;
   /* Animação de borda similar ao wrapper do login */
   animation: rgb-border-shadow-animation 20s linear infinite;
 }
@@ -133,16 +137,15 @@
 
 
 
-.painel-credited {
+.painel-credited { /* Corrected selector to target the h4 directly */
   color: var(--primary-color);
-  margin-right: 45px;
   margin-top: 10px;
+  text-align: center; /* Correct property for centering text */
 }
-
 
 :root {
   --primary-color: #fff;
-  --secondary-color: #333;
+  --secondary-color: #000000;
   --neon-color: #0ef;
   --text-shadow-neon: 0 0 5px var(--neon-color), 0 0 10px var(--neon-color);
 }
@@ -152,7 +155,9 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #000;
+  background: #00aeff;
+  border-style: solid; /* Adiciona um estilo de borda sólido */
+  border-width: 5px;   /* Define a largura da borda */
   flex-direction: column; /* Alinha os itens verticalmente */
 }
 
@@ -167,12 +172,13 @@ header {
 
 .wrapper {
   position: relative;
+  color: var(--secondary-color);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 400px;
   height: 500px;
-  background: transparent; /* Precisa ser corrigido no Chrome (webkit) */
+  background: var(--primary-color); 
   border-radius: 10px;
   transition: 0.5s;
   /* Animação RGB na borda e sombra */
@@ -201,7 +207,7 @@ h2 {
   outline: none;
   border-radius: 5px;
   font-size: 1em;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   padding: 0 10px 0 35px;
   transition: 0.5s;
   /* Animação RGB na borda e sombra do input */
@@ -209,7 +215,7 @@ h2 {
 }
 
 .input-box input::placeholder {
-  color: #fff;
+  color: var(--secondary-color);
 }
 
 .input-box .icon {
@@ -218,7 +224,7 @@ h2 {
   font-size: 1.2em;
   line-height: 55px;
   transition: 0.5s;
-  animation: rgb-text-animation 20s linear infinite;
+  color: var(--secondary-color);
 }
 
 .forgot-pass {
@@ -261,134 +267,96 @@ button {
 /* Definição da animação RGB */
 @keyframes rgb-animation {
   0% {
-    background-color: #ff0000;
-    box-shadow: 0 0 10px #ff0000;
+    background-color: #007BFF; /* Azul */
+    box-shadow: 0 0 10px #007BFF;
   }
-  20% {
-    background-color: #ff7f00;
-    box-shadow: 0 0 10px #ff7f00;
+  33% {
+    background-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 10px #003366;
   }
-  40% {
-    background-color: #ffff00;
-    box-shadow: 0 0 10px #ffff00;
-  }
-  60% {
-    background-color: #00ff00;
-    box-shadow: 0 0 10px #00ff00;
-  }
-  80% {
-    background-color: #0000ff;
-    box-shadow: 0 0 10px #0000ff;
+  67% {
+    background-color: #000000; /* Preto */
+    box-shadow: 0 0 10px #003366; /* Sombra azul escura para não sumir no fundo preto */
   }
   100% {
-    background-color: #ff0000;
-    box-shadow: 0 0 10px #ff0000;
+    background-color: #007BFF; /* Azul */
+    box-shadow: 0 0 10px #007BFF;
   }
 }
 
 /* Animação para texto */
 @keyframes rgb-text-animation {
   0% {
-    color: #ff0000;
+    color: #007BFF; /* Azul */
   }
-  20% {
-    color: #ff7f00;
+  33% {
+    color: #003366; /* Azul Escuro */
   }
-  40% {
-    color: #ffff00;
-  }
-  60% {
-    color: #00ff00;
-  }
-  80% {
-    color: #0000ff;
+  67% {
+    color: #FFFFFF; /* Branco para contraste no preto */
   }
   100% {
-    color: #ff0000;
+    color: #007BFF; /* Azul */
   }
 }
 
 /* Animação para bordas e sombras */
 @keyframes rgb-border-shadow-animation {
   0% {
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 20px #007BFF, inset 0 0 10px #007BFF;
   }
-  20% {
-    border: 5px solid #ff7f00;
-    box-shadow: 0 0 20px #ff7f00, inset 0 0 10px #ff7f00;
+  33% {
+    border-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 20px #003366, inset 0 0 10px #003366;
   }
-  40% {
-    border: 5px solid #ffff00;
-    box-shadow: 0 0 20px #ffff00, inset 0 0 10px #ffff00;
-  }
-  60% {
-    border: 5px solid #00ff00;
-    box-shadow: 0 0 20px #00ff00, inset 0 0 10px #00ff00;
-  }
-  80% {
-    border: 5px solid #0000ff;
-    box-shadow: 0 0 20px #0000ff, inset 0 0 10px #0000ff;
+  67% {
+    border-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 20px #003366, inset 0 0 10px #003366;
   }
   100% {
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 20px #ff0000, inset 0 0 10px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 20px #007BFF, inset 0 0 10px #007BFF;
   }
 }
 
 /* Animação para bordas e sombras do input */
 @keyframes rgb-input-shadow-animation {
   0% {
-    border: 2px solid #ff0000;
-    box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 10px #007BFF, inset 0 0 5px #007BFF;
   }
-  20% {
-    border: 2px solid #ff7f00;
-    box-shadow: 0 0 10px #ff7f00, inset 0 0 5px #ff7f00;
+  33% {
+    border-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 10px #003366, inset 0 0 5px #003366;
   }
-  40% {
-    border: 2px solid #ffff00;
-    box-shadow: 0 0 10px #ffff00, inset 0 0 5px #ffff00;
-  }
-  60% {
-    border: 2px solid #00ff00;
-    box-shadow: 0 0 10px #00ff00, inset 0 0 5px #00ff00;
-  }
-  80% {
-    border: 2px solid #0000ff;
-    box-shadow: 0 0 10px #0000ff, inset 0 0 5px #0000ff;
+  67% {
+    border-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 10px #003366, inset 0 0 5px #003366;
   }
   100% {
-    border: 2px solid #ff0000;
-    box-shadow: 0 0 10px #ff0000, inset 0 0 5px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 10px #007BFF, inset 0 0 5px #007BFF;
   }
 }
 
 /* Animação para a borda da tela (sem sombra interna) */
 @keyframes rgb-screen-border-animation {
   0% {
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 20px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 20px #007BFF;
   }
-  20% {
-    border: 5px solid #ff7f00;
-    box-shadow: 0 0 20px #ff7f00;
+  33% {
+    border-color: #003366; /* Azul Escuro */
+    box-shadow: 0 0 20px #003366;
   }
-  40% {
-    border: 5px solid #ffff00;
-    box-shadow: 0 0 20px #ffff00;
-  }
-  60% {
-    border: 5px solid #00ff00;
-    box-shadow: 0 0 20px #00ff00;
-  }
-  80% {
-    border: 5px solid #0000ff;
-    box-shadow: 0 0 20px #0000ff;
+  67% {
+    border-color: #000000; /* Preto */
+    box-shadow: 0 0 20px #003366; /* Sombra azul escura para não sumir no fundo preto */
   }
   100% {
-    border: 5px solid #ff0000;
-    box-shadow: 0 0 20px #ff0000;
+    border-color: #007BFF; /* Azul */
+    box-shadow: 0 0 20px #007BFF;
   }
 }
 
@@ -399,7 +367,7 @@ button {
 }
 
 .register-link p {
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 .register-link p a {
@@ -412,4 +380,97 @@ button {
 
 .register-link p a:hover {
   text-decoration: underline;
+}
+
+/* Media query para telas de celular (até 600px de largura) */
+@media (max-width: 600px) {
+  /* Remove a borda animada nos painéis e formulários em telas pequenas */
+  .painel-container, .wrapper {
+    animation: none; /* Remove a animação da borda */
+    border: none; /* Garante que não haja borda */
+    box-shadow: none; /* Garante que não haja sombra */
+  }
+}
+
+/* --- Estilos da Página do Carrinho --- */
+
+/* Sobrescreve o body para a página do carrinho, removendo o tema neon */
+/* A animação foi reativada, mas agora com o tema azul */
+.cart-page-body {
+    background-color: #c2c2c2 !important; /* Fundo preto para a animação de borda se destacar */
+    font-family: "Poppins", sans-serif !important;
+    animation: rgb-screen-border-animation 10s linear infinite;
+}
+
+/* Esconde o header padrão na página do carrinho */
+.cart-page-body header {
+    display: none;
+}
+
+.carrinho-container {
+    background-color: #003366; /* Azul-escuro */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: center;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.carrinho-container h1 {
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.product-list {
+    background-color: #66A3CC; /* Azul-claro */
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-item {
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+}
+
+.product-item .fa-trash {
+    color: #cc0000;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.total-value {
+    text-align: right;
+    color: white; /* Corrigido para branco para ser visível no painel */
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.carrinho-buttons button {
+    background-color: white;
+    color: #003366;
+    border-radius: 8px;
+    padding: 12px 20px;
+    margin: 3px;
+    font-size: 16px;
+    animation: none; /* Garante que a animação RGB não se aplique aqui */
+    align-items: center;
+}
+
+.carrinho-buttons button:hover {
+    background-color: #e6e6e6;
 }

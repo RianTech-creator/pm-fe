@@ -5,18 +5,18 @@
 {% endblock %}
 
 {% block title %}
-    Cadastro - Projeto Cantina
+   
 {% endblock %}
 
 {% block header %}
-    <h1>Cadastro</h1>
+   
 {% endblock %}
 
 {% block content %}
     <div class="wrapper">
         <form method="POST" action="{% url 'usuario_cadastrar' %}">
             {% csrf_token %}
-            <h2>Cadastro</h2>
+            <h2 class="title-cadastro">Cadastro</h2>
             <div class="input-box">
                 <span class="icon">
                     <i class="fa-solid fa-user"></i>
@@ -45,5 +45,5 @@
 {% endblock %}
 
 {% block footer %}
-    Projeto Cantina - 2024
+    Projeto Cantina - 2025
 {% endblock %}
