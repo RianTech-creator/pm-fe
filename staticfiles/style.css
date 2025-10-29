@@ -156,8 +156,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background: #00aeff;
-  border-style: solid; /* Adiciona um estilo de borda sólido */
-  border-width: 5px;   /* Define a largura da borda */
+  border: 5px solid var(--neon-color);   /* Define a largura da borda */
   flex-direction: column; /* Alinha os itens verticalmente */
 }
 
@@ -196,7 +195,7 @@ h2 {
 
 .input-box {
   position: relative;
-  width: 320px;
+  width: 100%; /* Faz o input-box ocupar a mesma largura do botão */
   margin: 30px 0;
 }
 
@@ -211,7 +210,7 @@ h2 {
   padding: 0 10px 0 35px;
   transition: 0.5s;
   /* Animação RGB na borda e sombra do input */
-  animation: rgb-input-shadow-animation 20s linear infinite;
+  animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 .input-box input::placeholder {
@@ -221,6 +220,7 @@ h2 {
 .input-box .icon {
   position: absolute;
   left: 10px;
+  right: 5px;
   font-size: 1.2em;
   line-height: 55px;
   transition: 0.5s;
@@ -254,7 +254,7 @@ button {
   font-weight: 500;
   transition: 0.5s;
   /* Aplica a animação RGB */
-  animation: rgb-animation 20s linear infinite;
+  animation: rgb-animation 7s linear infinite;
 }
 
 /* Removemos a mudança de fundo no hover para não conflitar com a animação,
@@ -299,6 +299,23 @@ button {
     color: #007BFF; /* Azul */
   }
 }
+
+/* Nova animação para texto que corresponde à animação da borda */
+@keyframes rgb-border-text-animation {
+  0% {
+    color: #007BFF; /* Azul */
+  }
+  33% {
+    color: #003366; /* Azul Escuro */
+  }
+  67% {
+    color: #000000; /* Preto */
+  }
+  100% {
+    color: #007BFF; /* Azul */
+  }
+}
+
 
 /* Animação para bordas e sombras */
 @keyframes rgb-border-shadow-animation {
@@ -375,11 +392,16 @@ button {
   font-weight: 600;
   transition: 0.5s;
   /* Animação RGB no link de registro */
-  animation: rgb-text-animation 20s linear infinite;
+  
+  animation: rgb-border-text-animation 7s linear infinite;
 }
 
 .register-link p a:hover {
   text-decoration: underline;
+}
+
+.login-title {
+  color: var(--secondary-color);
 }
 
 /* Media query para telas de celular (até 600px de largura) */
@@ -392,12 +414,9 @@ button {
   }
 }
 
-/* --- Estilos da Página do Carrinho --- */
-
-/* Sobrescreve o body para a página do carrinho, removendo o tema neon */
 /* A animação foi reativada, mas agora com o tema azul */
 .cart-page-body {
-    background-color: #c2c2c2 !important; /* Fundo preto para a animação de borda se destacar */
+    background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
     font-family: "Poppins", sans-serif !important;
     animation: rgb-screen-border-animation 10s linear infinite;
 }
@@ -410,9 +429,9 @@ button {
 .carrinho-container {
     background-color: #003366; /* Azul-escuro */
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: center;
-    max-width: 400px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 800px; /* Aumentado para melhor visualização em telas maiores */
     padding: 20px;
     text-align: center;
     color: white;
@@ -443,7 +462,7 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 16px;
+    font-size: 18px; /* Aumentado para melhor legibilidade */
 }
 
 .product-item .fa-trash {
@@ -460,12 +479,19 @@ button {
     font-size: 18px;
 }
 
+.carrinho-buttons {
+    display: flex;
+    gap: 15px; /* Espaçamento entre os botões */
+    justify-content: center;
+}
+
 .carrinho-buttons button {
     background-color: white;
     color: #003366;
     border-radius: 8px;
     padding: 12px 20px;
     margin: 3px;
+    flex: 1; /* Faz os botões crescerem para preencher o espaço */
     font-size: 16px;
     animation: none; /* Garante que a animação RGB não se aplique aqui */
     align-items: center;
