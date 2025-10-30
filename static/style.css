@@ -267,9 +267,15 @@ button {
 /* Definição da animação RGB */
 @keyframes rgb-animation {
   0% {
-    background-color: #007BFF; /* Azul */
-    box-shadow: 0 0 10px #007BFF;
+    background-color: var(--neon-color); /* Azul */
+    box-shadow: 0 0 10px var(--neon-color);
   }
+
+  15% {
+    border-color: #007bff;
+    box-shadow: 0 0 20px #007bff;
+  }
+
   33% {
     background-color: #003366; /* Azul Escuro */
     box-shadow: 0 0 10px #003366;
@@ -375,7 +381,7 @@ button {
   }
   67% {
     border-color: #000000; /* Preto */
-    box-shadow: 0 0 20px #003366; /* Sombra azul escura para não sumir no fundo preto */
+    box-shadow: 0 0 20px #000000; /* Sombra azul escura para não sumir no fundo preto */
   }
   100% {
     border-color: #007BFF; /* Azul */
@@ -424,7 +430,7 @@ button {
 .cart-page-body {
     background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
     font-family: "Poppins", sans-serif !important;
-    animation: rgb-screen-border-animation 10s linear infinite;
+    animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 /* Esconde o header padrão na página do carrinho */
@@ -433,7 +439,7 @@ button {
 }
 
 .carrinho-container {
-    background-color: #003366; /* Azul-escuro */
+    background-color: var(--primary-color); /* Azul-escuro */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     width: 100%;
@@ -444,17 +450,18 @@ button {
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
+    animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 .carrinho-container h1 {
     font-family: Arial, sans-serif;
     font-size: 28px;
     margin-bottom: 20px;
-    color: white;
+    color: var(--secondary-color);
 }
 
 .product-list {
-    background-color: #66A3CC; /* Azul-claro */
+    background-color: #003366; /* Azul-claro */
     padding: 15px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -480,23 +487,21 @@ button {
 
 .total-value {
     text-align: right;
-    color: white; /* Corrigido para branco para ser visível no painel */
+    color: var(--secondary-color); /* Corrigido para branco para ser visível no painel */
     margin-bottom: 20px;
     font-weight: bold;
     font-size: 18px;
 }
 
 .carrinho-buttons button {
-    background-color: white;
-    color: #003366;
+    /* background-color: white; */ /* Removido para a animação funcionar */
+    color: var(--primary-color); /* Alterado para branco para melhor contraste */
     border-radius: 8px;
     padding: 12px 20px;
     margin: 3px;
     font-size: 16px;
-    animation: none; /* Garante que a animação RGB não se aplique aqui */
+    animation: rgb-animation 7s linear infinite; /* Animação de fundo RGB */
     align-items: center;
 }
 
-.carrinho-buttons button:hover {
-    background-color: #e6e6e6;
-}
+    
