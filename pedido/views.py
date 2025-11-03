@@ -16,11 +16,11 @@ DUMMY_CARDAPIO = [
 def home_view(request):
     return render(request, 'home.html')
 
-@login_required(login_url='login_usuario')
+@login_required(login_url='usuario_login')
 def listar_pedidos(request):
     return render(request, 'listar_pedidos.html')
 
-@login_required(login_url='login_usuario')
+@login_required(login_url='usuario_login')
 def criar_pedidos(request):
     """
     Exibe o cardápio para o usuário fazer um novo pedido (GET)
@@ -39,9 +39,12 @@ def criar_pedidos(request):
     context = {'cardapio': cardapio}
     return render(request, 'criar_pedidos.html', context)
 
-@login_required(login_url='login_usuario')
+@login_required(login_url='usuario_login')
 def historico_pedidos(request):
     return render(request, 'historico_pedidos.html')
 
 def carrinho(request):
     return render(request, 'carrinho.html')
+
+def listar_pedidos(request):
+    return render(request, 'listar_pedidos.html')
