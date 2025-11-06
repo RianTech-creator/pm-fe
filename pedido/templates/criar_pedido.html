@@ -1,15 +1,53 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block body_class %}
+    criar-pedido-body
+{% endblock %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 {% endblock %}
 
 {% block title %}
+    Cardápio
 {% endblock %}
 
 {% block header %}
+    
 {% endblock %}
 
 {% block content %}
+<div class="pedido-container">
+    <header class="pedido-header">
+        <h1 class="pedido-title">Fazer Pedido</h1>
+    </header>
+
+    <nav class="category-menu">
+        <button class="category-btn">Salgados</button>
+        <button class="category-btn">Bebidas</button>
+        <button class="category-btn">Doces</button>
+        <a href="{% url 'logout_usuario' %}" class="category-btn" title="Sair">Sair</a>
+    </nav>
+
+    <main class="product-grid">
+        {% for produto in cardapio %}
+        <div class="product-card">
+            <div class="product-image"></div>
+            <div class="product-info">
+                <span class="product-name">{{ produto.nome }}</span>
+                <span class="product-price">R$ {{ produto.preco|floatformat:2 }}</span>
+            </div>
+            <div class="product-controls">
+                <button class="control-btn">-</button>
+                <span class="quantity">0</span>
+                <button class="control-btn">+</button>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
+
+    
 {% endblock %}
 
 {% block footer %}

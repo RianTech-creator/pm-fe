@@ -92,12 +92,12 @@
 
 /* Estilos para o Painel do Usuário */
 .painel-title {
-  color: var(--secondary-color); /* Usando a variável de cor néon */
+  color: var(--primary-color); /* Usando a variável de cor néon */
   text-align: center; /* Centralizando o título */
 }
 
 .painel-container {
-  background: #000; /* Um fundo escuro, mas diferente do body */
+  background: var(--primary-color); /* Um fundo escuro, mas diferente do body */
   padding: 40px;
   border-radius: 10px;
   text-align: center;
@@ -105,7 +105,7 @@
   width: center;
   max-width: 380px;
   /* Animação de borda similar ao wrapper do login */
-  animation: rgb-border-shadow-animation 7s linear infinite;
+  animation: rgb-border-shadow-animation 20s linear infinite;
 }
 
 .painel-container h2 {
@@ -116,7 +116,7 @@
 }
 
 .painel-container h1 {
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-align: center;
   align-items: center;
   top: -20px;
@@ -124,14 +124,15 @@
 
 .painel-container p {
   margin-bottom: 30px;
-  color: var(--secondary-color); /* Garante que o parágrafo seja branco */
   color: var(--secondary-color); /* Cor preta para o parágrafo */
   font-size: 1.1em;
 }
 
 
 .painel-buttons a {
-  margin-bottom: 7px; 
+  position: relative;
+  width: 100%; /* Faz o input-box ocupar a mesma largura do botão */
+  margin: 5px 0;
 }
 
 .painel-container li {

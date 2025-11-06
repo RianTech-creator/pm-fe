@@ -20,7 +20,7 @@ def home_view(request):
 def listar_pedidos(request):
     return render(request, 'listar_pedidos.html')
 
-@login_required(login_url='usuario_login')
+# @login_required(login_url='usuario_login')
 def criar_pedidos(request):
     """
     Exibe o cardápio para o usuário fazer um novo pedido (GET)
@@ -37,7 +37,7 @@ def criar_pedidos(request):
         return redirect('historico_pedidos')
 
     context = {'cardapio': cardapio}
-    return render(request, 'criar_pedidos.html', context)
+    return render(request, 'criar_pedido.html', context)
 
 @login_required(login_url='usuario_login') #tirar login_required para verificar rota pedido/historico
 def historico(request):
