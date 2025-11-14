@@ -494,6 +494,10 @@ button {
     margin-left: 15px;
 }
 
+.product-images {
+  width: 200px;
+}
+
 .total-value {
     text-align: right;
     color: var(--secondary-color); /* Corrigido para branco para ser visível no painel */

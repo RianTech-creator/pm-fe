@@ -33,7 +33,9 @@
     <main class="product-grid">
         {% for produto in cardapio %}
         <div class="product-card">
-            <div class="product-image"></div>
+            <div class="product-image">
+                <img class="product-images" src="{% static 'images/misto_quente.jpeg' %}" alt="" srcset="">
+            </div>
             <div class="product-info">
                 <span class="product-name">{{ produto.nome }}</span>
                 <span class="product-price">R$ {{ produto.preco|floatformat:2 }}</span>
