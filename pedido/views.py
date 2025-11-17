@@ -6,10 +6,10 @@ from django.contrib.auth.decorators import login_required
 # Isso deve ser substituído por uma consulta a um modelo 'Produto' ou 'ItemCardapio'.
 DUMMY_CARDAPIO = [
     {'id': 1, 'nome': 'Misto Quente', 'descricao': 'Pão de forma, queijo e presunto.', 'preco': 5.50, 'imagem': 'images/misto_quente.jpeg'},
-    {'id': 2, 'nome': 'Pão de Queijo', 'descricao': 'Unidade.', 'preco': 3.00, 'imagem': 'images/pao_de_queijo.jpg'},
-    {'id': 3, 'nome': 'Coxinha de Frango', 'descricao': 'Salgado frito recheado com frango.', 'preco': 6.00, 'imagem': 'images/coxinha.jpg'},
-    {'id': 4, 'nome': 'Suco de Laranja Natural', 'descricao': 'Copo de 300ml.', 'preco': 7.00, 'imagem': 'images/suco_laranja.jpg'},
-    {'id': 5, 'nome': 'Refrigerante Lata', 'descricao': 'Coca-cola, Guaraná ou Soda.', 'preco': 5.00, 'imagem': 'images/refrigerante.jpg'},
+    {'id': 2, 'nome': 'Pão de Queijo', 'descricao': 'Unidade.', 'preco': 3.00, 'imagem': 'images/pao_de_queijo.jpeg'},
+    {'id': 3, 'nome': 'Coxinha de Frango', 'descricao': 'Salgado frito recheado com frango.', 'preco': 6.00, 'imagem': 'images/coxinha.jpeg'},
+    {'id': 4, 'nome': 'Suco de Laranja Natural', 'descricao': 'Copo de 300ml.', 'preco': 7.00, 'imagem': 'images/suco_laranja.jpeg'},
+    {'id': 5, 'nome': 'Refrigerante Lata', 'descricao': 'Coca-cola, Guaraná ou Soda.', 'preco': 5.00, 'imagem': 'images/refrigerante.jpeg'},
 ]
 
 # Create your views here.
