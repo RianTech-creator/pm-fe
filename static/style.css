@@ -462,6 +462,64 @@ button {
     animation: rgb-screen-border-animation 7s linear infinite;
 }
 
+/* --- Estilos da Página de Pagamento --- */
+
+.payment-page-body {
+    background-color: var(--neon-color); /* Define a cor de fundo estática */
+    animation: rgb-screen-border-animation 7s linear infinite; /* Aplica a animação de borda neon */
+}
+
+.payment-container {
+    text-align: center;
+    width: 90%;
+    background: var(--neon-color);
+    max-width: 500px;
+    margin-top: -100px; /* Adicione esta linha para mover o conteúdo para cima */
+}
+
+.payment-title {
+    font-size: 3rem;
+    color: var(--secondary-color); /* Cor do texto do título para preto */
+    margin-bottom: 60px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.options-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espaçamento entre os botões */
+}
+
+.payment-option {
+    /* Estilos para se assemelhar ao .btn-animated */
+    display: flex;
+    justify-content: space-between; /* Mantém texto e ícone separados */
+    align-items: center;
+    width: 100%; /* Ocupa a largura do wrapper */
+    height: 60px; /* Altura um pouco maior para acomodar o conteúdo */
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 25px; /* Padding horizontal */
+    text-decoration: none;
+    transition: 0.5s;
+    animation: rgb-animation 7s linear infinite; /* Animação de fundo RGB */
+}
+
+.payment-option span {
+    font-size: 1.2em; /* Tamanho da fonte ajustado */
+    font-weight: 500;
+    color: var(--primary-color); /* Cor do texto branca */
+}
+
+.payment-option i {
+    font-size: 1.5em; /* Tamanho do ícone ajustado */
+    color: var(--primary-color); /* Cor do ícone branca */
+}
+
+
+
 .carrinho-container h1 {
     font-family: Arial, sans-serif;
     font-size: 28px;

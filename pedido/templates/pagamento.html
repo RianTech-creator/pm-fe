@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}
+   payment-page-body
+{% endblock %}
+
+{% block title %}
+    Formas de Pagamento
+{% endblock %}
+
+{% block header %}
+    
+{% endblock %}
+
+{% block content %}
+    
+    <div class="payment-container">
+        <h1 class="payment-title">Formas de Pagamento</h1>
+
+        <div class="options-wrapper">
+            <a href="{% url 'pagamento_concluido' %}" class="payment-option">
+                <span>Dinheiro</span>
+                <i class="fa-solid fa-money-bill-wave"></i>
+            </a>
+            <a href="{% url 'pagamento_concluido' %}" class="payment-option">
+                <span>Cartão de crédito</span>
+                <i class="fa-regular fa-credit-card"></i>
+            </a>
+            <a href="{% url 'pagamento_concluido' %}" class="payment-option">
+                <span>Pix</span>
+                <i class="fa-brands fa-pix"></i>
+            </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

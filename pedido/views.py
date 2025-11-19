@@ -51,3 +51,6 @@ def listar_pedidos(request):
 
 def status_pedido(request):
     return render(request, 'status_pedido.html')
+
+def forma_pagamento(request):
+    return render(request, 'pagamento.html')
