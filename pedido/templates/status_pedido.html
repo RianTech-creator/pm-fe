@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}
+    status-pedido-body
+{% endblock %}
+
+{% block title %}
+    Pedidos Recebidos
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<!-- A top-bar está DENTRO do body que tem o layout flex -->
+<div class="top-bar">
+    <h1>Status do Pedido</h1>
+</div>
+
+<div class="order-list-container">
+    <!-- Lista de pedidos aqui -->
+</div>
+
+
+{% endblock %}
+
+{% block footer %}
+    <!-- O ideal é que este botão seja um link para a página do painel -->
+    <a href="{% url 'painel_cantineiro' %}" class="back-button">Voltar ao painel</a>
+{% endblock %}

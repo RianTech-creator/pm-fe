@@ -435,6 +435,58 @@ button {
   }
 }
 
+/* --- Estilos da Página de Status do Pedido --- */
+
+.top-bar {
+    background-color: #003366;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px; /* Altura fixa */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: none; /* Garante que a animação de botão não seja aplicada */
+    z-index: 100; /* Garante que fique acima de outros conteúdos */
+}
+
+/* Novo container para o conteúdo da página de status */
+.status-page-content {
+    display: flex;
+    justify-content: flex-start; /* Alinha a lista de pedidos à esquerda */
+    width: 100%;
+    min-height: 100vh; /* Ocupa a altura da tela */
+    padding-top: 100px; /* Espaço para não ficar atrás da top-bar */
+    padding-left: 20px; /* Espaço lateral */
+    box-sizing: border-box;
+}
+
+.order-list-container {
+    /* O padding agora é controlado pelo .status-page-content */
+}
+
+.order-list li {
+    color: black;
+    font-size: 1.8em; /* Fonte grande para os itens */
+    margin-bottom: 25px; /* Espaçamento grande entre os itens da lista */
+}
+
+.back-button {
+    position: fixed; /* Posição fixa na tela */
+    bottom: 30px;
+    right: 40px;
+    background-color: white;
+    border: 1px solid black;
+    padding: 12px 24px;
+    color: black;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+    animation: none; /* Remove a animação global de botão */
+}
+
 /* A animação foi reativada, mas agora com o tema azul */
 .cart-page-body {
     background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
