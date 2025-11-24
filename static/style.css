@@ -86,8 +86,10 @@
   text-align: center;
   line-height: 45px; /* Alinha o texto verticalmente */
   transition: 0.5s;
-  /* Aplica a mesma animação RGB do botão de login */
-  animation: rgb-animation 7s linear infinite;
+  /* Modificado para usar a animação de borda */
+  background: transparent; /* Fundo transparente */
+  border: 2px solid; /* Borda que será animada */
+  animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 /* Estilos para o Painel do Usuário */
@@ -450,7 +452,6 @@ button {
     justify-content: center;
     align-items: center;
     animation: none; /* Garante que a animação de botão não seja aplicada */
-    z-index: 100; /* Garante que fique acima de outros conteúdos */
 }
 
 /* Novo container para o conteúdo da página de status */
@@ -464,9 +465,11 @@ button {
     box-sizing: border-box;
 }
 
-.order-list-container {
-    /* O padding agora é controlado pelo .status-page-content */
+.status-pedido-body {
+    background-color: var(--neon-color);
+    animation: rgb-screen-border-animation 7s linear infinite;
 }
+
 
 .order-list li {
     color: black;
@@ -487,16 +490,23 @@ button {
     animation: none; /* Remove a animação global de botão */
 }
 
-/* A animação foi reativada, mas agora com o tema azul */
-.cart-page-body {
-    background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
-    font-family: "Poppins", sans-serif !important;
-    animation: rgb-screen-border-animation 7s linear infinite;
+.footer-container {
+    position: absolute;
+    bottom: 30px;
+    right: 40px; /* Posiciona no canto direito */
+    /* Removemos as propriedades de centralização */
 }
 
 /* Esconde o header padrão na página do carrinho */
 .cart-page-body header {
     display: none;
+}
+
+/* A animação foi reativada, mas agora com o tema azul */
+.cart-page-body {
+    background-color: var(--neon-color) !important; /* Fundo preto para a animação de borda se destacar */
+    font-family: "Poppins", sans-serif !important;
+    animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 .carrinho-container {

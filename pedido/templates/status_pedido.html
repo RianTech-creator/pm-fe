@@ -26,6 +26,8 @@
 {% endblock %}
 
 {% block footer %}
-    <!-- O ideal é que este botão seja um link para a página do painel -->
-    <a href="{% url 'painel_cantineiro' %}" class="back-button">Voltar ao painel</a>
+    <div class="footer-container">
+        <!-- O ideal é que este botão seja um link para a página do painel -->
+        <a href="{% url 'painel_cantineiro' %}" class="btn-animated">Voltar ao painel</a>
+    </div>
 {% endblock %}
