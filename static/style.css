@@ -133,8 +133,17 @@
 
 .painel-buttons a {
   position: relative;
-  width: 100%; /* Faz o input-box ocupar a mesma largura do botão */
+  /* Ajustes para se comportar como .btn-animated */
+  display: block; /* Faz o link ocupar a largura total e permite altura */
+  width: 100%;
+  height: 45px;
+  line-height: 45px; /* Centraliza o texto verticalmente */
+  text-decoration: none;
+  /* Voltando para o estilo de botão RGB preenchido */
+  color: var(--primary-color); /* Texto branco para contrastar com o fundo animado */
+  background: var(--neon-color); /* Cor inicial para a animação */
   margin: 5px 0;
+  animation: rgb-animation 7s linear infinite; /* Usando a animação de fundo */
 }
 
 .painel-container li {
