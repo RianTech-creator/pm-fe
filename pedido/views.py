@@ -54,3 +54,6 @@ def status_pedido(request):
 
 def forma_pagamento(request):
     return render(request, 'pagamento.html')
+
+def pagamento_feito(request):
+    return render(request, 'pagamento_concluido.html')

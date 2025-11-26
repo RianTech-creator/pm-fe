@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}
+
+{% block body_class %}
+   pagamento-concluido-page-body
+{% endblock %}
+
+{% block title %}
+    Pagamento Concluído
+{% endblock %}
+
+{% block content %}
+    
+    <div class="main-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+
+        <h1 class="success-title">Pagamento Concluído!</h1>
+
+        <p class="success-message">Seu pedido foi recebido e já está sendo preparado com carinho.</p>
+        
+        <!-- Em uma aplicação real, o número do pedido viria do backend -->
+        <p class="order-number">Número do Pedido: <strong>#12345</strong></p>
+
+    </div>
+{% endblock %}
+
+{% block footer %}
+    <a href="{% url 'painel_cantineiro' %}" class="btn-animated">Acompanhar Pedido</a>
+{% endblock %}
+
