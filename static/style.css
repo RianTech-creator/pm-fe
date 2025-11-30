@@ -158,7 +158,7 @@
 
 
 .painel-credited { /* Corrected selector to target the h4 directly */
-  color: var(--primary-color);
+  color: var(--secondary-color);
   margin-top: 10px;
   text-align: center; /* Correct property for centering text */
 }
@@ -795,7 +795,6 @@ button {
 .criar-produto-body {
     background-color: var(--neon-color);
     padding: 0;
-    border: none; 
     /* Mantém o alinhamento global para centralizar o container */
     justify-content: flex-start; /* Alinha o container no topo */
     animation: rgb-screen-border-animation 7s linear infinite;
@@ -804,7 +803,7 @@ button {
 /* O container principal da página */
 .criar-produto-container {
     width: 100%;
-    padding-top: 150px; /* Aumentado para descer o formulário */
+    padding-top: 210px; /* Aumentado para descer o formulário */
 }
 
 .criar-produto-header {
@@ -819,6 +818,7 @@ button {
     display: flex;
     align-items: center; /* Centraliza o título verticalmente */
     justify-content: center; /* Centraliza o conteúdo do header horizontalmente */
+    /* z-index: -1; Coloca o header atrás da borda do body */
 }
 
 .criar-produto-title {
@@ -920,3 +920,121 @@ button {
     margin-top: 30px;
 }
     
+.add-product-credited {
+  color: var(--secondary-color);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.editar-product-credited {
+  color: var(--secondary-color);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.login-credited {
+  color: var(--secondary-color);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pay-credited {
+  color: var(--secondary-color);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* --- Estilos da Página de Histórico de Pedidos --- */
+
+/* Estilo para o corpo da página de histórico */
+.historico-pedidos-body {
+    background-color: var(--neon-color);
+    font-family: "Poppins", sans-serif; /* Fonte padrão do site */
+    position: relative; /* Necessário para a barra lateral */
+    padding-right: 40px; /* Espaço para a barra lateral não sobrepor o conteúdo */
+    animation: rgb-screen-border-animation 7s linear infinite; /* Animação de borda neon */
+}
+
+/* Container principal da página de histórico */
+.historico-container {
+    width: 100%;
+    padding-top: 110px; /* Reduzido para mover o conteúdo para cima */
+    padding-bottom: 20px;
+}
+
+/* Faixa do título */
+.top-bar-historico {
+    background-color: #003366; /* Cor igual ao do criar-produto-header */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.top-bar-historico h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-transform: none; /* Remove o uppercase para igualar */
+    margin: 0;
+}
+
+/* Cartão de item do histórico */
+.history-item {
+    background-color: var(--primary-color);
+    border-radius: 20px; /* Cantos um pouco mais arredondados */
+    padding: 30px 35px; /* Aumentado para maior espaçamento interno */
+    margin-bottom: 25px; /* Aumentado para mais espaço entre os cartões */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--secondary-color);
+    max-width: 900px; /* Aumentado para deixar o card mais largo */
+    margin-left: auto;
+    margin-right: auto;
+    /* Animação de borda e sombra neon */
+    animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+/* Detalhes do produto (nome e preço) */
+.item-details {
+    flex-grow: 1;
+}
+.item-details .product-name {
+    font-size: 1.5em; /* Fonte maior para o nome do produto */
+    font-weight: 600;
+}
+
+.item-details .product-price {
+    font-size: 1.3em; /* Fonte maior para o preço */
+    font-weight: 500;
+    color: #333; /* Cor um pouco mais suave */
+}
+
+.item-datetime {
+    text-align: right;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.item-datetime span {
+    font-size: 1em; /* Aumenta a fonte da data e hora */
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Círculo azul à esquerda */
+.history-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #0d47a1; /* Azul escuro */
+    border-radius: 50%; /* Círculo perfeito */
+    margin-right: 20px;
+}
+
+

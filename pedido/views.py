@@ -39,7 +39,7 @@ def criar_pedidos(request):
     context = {'cardapio': cardapio}
     return render(request, 'criar_pedido.html', context)
 
-@login_required(login_url='usuario_login') #tirar login_required para verificar rota pedido/historico
+# @login_required(login_url='usuario_login') #tirar login_required para verificar rota pedido/historico
 def historico(request):
     return render(request, 'historico_pedidos.html')
 
