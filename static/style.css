@@ -175,9 +175,10 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #00aeff;
+  background: var(--neon-color);
   border: 10px solid var(--neon-color);   /* Define a largura da borda */
   flex-direction: column; /* Alinha os itens verticalmente */
+  animation: rgb-screen-border-animation 7s linear infinite;
 }
 
 
@@ -188,6 +189,19 @@ header {
   z-index: 10; /* Garante que o header fique sobre outros elementos se necessário */
 }
 
+/* Estilo para o ícone de perfil no canto superior direito */
+.profile-icon {
+  position: absolute;
+  top: 20px; /* Distância do topo */
+  right: 30px; /* Distância da direita */
+  z-index: 10;
+}
+
+.profile-icon a {
+  color: var(--primary-color); /* Cor branca para o ícone */
+  font-size: 2.2em; /* Tamanho do ícone */
+  text-decoration: none;
+}
 
 .wrapper {
   position: relative;
@@ -723,6 +737,130 @@ button {
     color: #fff;
 }
 
+/* --- Estilos da Página de Perfil --- */
+
+/* 1. Corpo da página de perfil */
+.profile-body {
+    /* A animação de borda foi removida desta página. */
+    background-color: var(--neon-color); /* Cor de fundo padrão do site */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 20px); /* Ocupa a altura da tela, descontando a borda do body */
+}
+
+/* 2. Container principal (frame) */
+.frame {
+    width: 90%;
+    max-width: 600px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Garante que a top-bar não vaze */
+}
+
+/* 3. Barra superior com o título */
+.top-bar {
+    background-color: #003366;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.top-bar h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+/* 4. Conteúdo interno (abaixo da barra) */
+.inner-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaço entre as seções */
+}
+
+/* 5. Seção do ícone de usuário */
+.user-icon-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 4px solid #003366;
+}
+
+.user-icon svg {
+    width: 70%;
+    height: 70%;
+    fill: none;
+    stroke: #003366;
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* 6. Seção dos campos de informação */
+.fields-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-pill {
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 1em;
+    color: #333;
+    border: none; /* Garante que nenhuma borda seja aplicada */
+}
+
+.info-pill strong {
+    color: #000;
+}
+
+/* 7. Seção dos botões */
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn {
+    width: 150px;
+    animation: rgb-animation 7s linear infinite; /* Reutiliza a animação de botão */
+}
+
+.btn-delete {
+    background: #dc3545; /* Cor vermelha para exclusão */
+    color: white;
+    border: none;
+    width: auto;
+    padding: 10px 20px;
+    animation: none; /* Remove a animação RGB do botão de excluir */
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1203,7 +1341,7 @@ button {
     justify-content: center;
     align-items: center;
     padding-top: 50px; /* Um pouco de espaço extra do topo se o container for pequeno */
-    background-color: #00aeff !important;
+    background-color: var(--neon-color) !important;
     animation: rgb-screen-border-animation 7s linear infinite;
 }
 
@@ -1306,7 +1444,7 @@ button {
     align-items: center;
     padding-top: 50px;
     border: 10px solid var(--primary-color);
-    background-color: #00aeff !important;
+    background-color: var(--neon-color) !important;
     animation: rgb-screen-border-animation 7s linear infinite;
 }
 

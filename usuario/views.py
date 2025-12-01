@@ -68,3 +68,5 @@ def painel_cantineiro(request):
 def deletar_usuario(request):
     return render(request, 'deletar_conta.html')
 
+def usuario_perfil(request):
+    return render(request, 'perfil.html')

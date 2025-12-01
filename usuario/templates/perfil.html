@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Perfil de Usuário
+{% endblock %}
+
+{% block styles %}
+{% endblock %}
+
+{% block content %}
+<div class="profile-body">
+    <div class="frame">
+        <div class="top-bar">
+            <h1>Bem-Vindo ao seu Perfil!</h1>
+        </div>
+        <div class="inner-content">
+            <div> <!-- Container para conteúdo superior e campos -->
+                <!-- Parte superior – Ícone de usuário -->
+                <div class="user-icon-section">
+                    <div class="user-icon">
+                        <!-- Ícone SVG de usuário com contorno grosso -->
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="35" r="20" />
+                            <path d="M20 90 C 20 70, 80 70, 80 90 Z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Campos de texto -->
+                <div class="fields-section">
+                    <div class="info-pill">
+                        <strong>Usuário:</strong> nome.de.usuario
+                    </div>
+                    <div class="info-pill">
+                        <strong>Nome completo:</strong> Nome Sobrenome do Usuário
+                    </div>
+                    <div class="info-pill">
+                        <strong>Data de cadastro:</strong> 01/01/2024
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botões inferiores -->
+            <div class="buttons-section">
+                <div class="button-group">
+                    <button class="btn">Salvar</button>
+                    <button class="btn">Voltar</button>
+                </div>
+                <div class="button-group">
+                    <a href="{% url 'deletar_usuario' %}" class="btn-delete">Excluir minha conta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -36,6 +36,3 @@ def deletar_produto(request):
 
 def adicionar_estoque(request):
     return render(request, 'adicionar_estoque.html')
-
-def remover_estoque(request):
-    return render(request, 'remover_estoque.html')
