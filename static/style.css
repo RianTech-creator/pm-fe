@@ -1529,6 +1529,10 @@ button {
   
  }
 
+.nenhum-produto {
+  color: var(--secondary-color);
+}
+
 .btn-editar { background-color: #007bff; }
 .btn-excluir { background-color: #dc3545; }
 
