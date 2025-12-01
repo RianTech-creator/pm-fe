@@ -10,4 +10,6 @@ urlpatterns = [
     path('carrinho/adicionar/', views.carrinho, name='adicionar_ao_carrinho'), 
     path('forma_pagamento/', views.forma_pagamento, name='forma_pagamento'),
     path('pagamento_concluido/', views.pagamento_feito, name='pagamento_feito'),
+    path('detalhes/', views.detalhes_pedido, name='detalhes_pedido'),
+
 ]

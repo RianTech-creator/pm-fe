@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}
+    detalhes-pedido-body
+{% endblock %}
+
+{% block title %}
+    Detalhes do Pedido
+{% endblock %}
+
+{% block head %}
+    <!-- Adicionando Font Awesome para ícones, se necessário -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+{% endblock %}
+
+{% block content %}
+    <div class="detalhes-container">
+        <h2>Detalhes do Pedido</h2>
+
+        <!-- Informações do Pedido -->
+        <!-- Os dados aqui seriam preenchidos dinamicamente com variáveis do Django -->
+        <p>
+            <strong>ID do Pedido:</strong>
+            <span id="order-id">#{{ pedido.id|default:"12345" }}</span>
+        </p>
+        <p>
+            <strong>Cliente:</strong>
+            <span id="order-user">{{ pedido.cliente.nome|default:"Nome do Cliente" }}</span>
+        </p>
+        <p>
+            <strong>Status:</strong>
+            <span id="order-status">{{ pedido.status|default:"Em Preparo" }}</span>
+        </p>
+        <p>
+            <strong>Total do Pedido:</strong>
+            <span id="order-total">R$ {{ pedido.total|default:"75,00" }}</span>
+        </p>
+
+        <!-- Lista de Itens -->
+        <ul class="itens-list">
+            <h3>Itens:</h3>
+            <!-- Aqui você faria um loop nos itens do pedido -->
+            <li><span>2x Hambúrguer Clássico</span><span>R$ 50,00</span></li>
+            <li><span>1x Porção de Batata Frita</span><span>R$ 15,00</span></li>
+            <li><span>1x Refrigerante</span><span>R$ 10,00</span></li>
+        </ul>
+
+        <!-- Ações -->
+        <div class="detalhes-actions">
+            <a href="{% url 'listar_pedidos' %}" class="btn-voltar">Voltar</a>
+            <form action="#" method="POST" onsubmit="return confirm('Tem certeza que deseja excluir este pedido?');">
+                <button type="submit">Excluir Pedido</button>
+            </form>
+        </div>
+    </div>
+{% endblock %}

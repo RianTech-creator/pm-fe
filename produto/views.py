@@ -26,7 +26,7 @@ def cadastrar_produto(request):
     return render(request, 'adicionar_estoque.html')
 
 def listar_produtos(request):
-    return render(request, 'listar_produtos.html')
+    return render(request, 'listar_produto.html')
 
 def editar_produto(request):
     return render(request, 'editar_produto.html')
@@ -34,7 +34,7 @@ def editar_produto(request):
 def deletar_produto(request):
     return render(request, 'deletar_produto.html')
 
-def adicionar_produto(request):
+def adicionar_estoque(request):
     return render(request, 'adicionar_estoque.html')
 
 def remover_estoque(request):

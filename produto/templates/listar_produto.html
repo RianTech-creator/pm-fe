@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_class %}
+    listar-produto-body
+{% endblock %}
+
+{% block title %}
+    Listar Produtos
+{% endblock %}
+
+{% block content %}
+<header class="listar-produto-header">
+    <h1 class="listar-produto-title">Estoque de Produtos</h1>
+</header>
+
+<div class="listar-produto-content">
+    <div class="tabela-produtos-container">
+        <table class="tabela-produtos">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Preço</th>
+                    <th>Estoque</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                {# Exemplo estático. Com o backend, você faria um loop: {% for produto in produtos %} #}
+                <tr>
+                    <td>Misto Quente</td>
+                    <td>R$ 5,50</td>
+                    <td>50</td>
+                    <td class="acoes">
+                        <a href="{% url 'editar_produto' %}" class="btn-acao btn-editar">Editar</a>
+                        <a href="#" class="btn-acao btn-excluir">Excluir</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Pão de Queijo</td>
+                    <td>R$ 3,00</td>
+                    <td>100</td>
+                    <td class="acoes">
+                        <a href="{% url 'editar_produto' %}" class="btn-acao btn-editar">Editar</a>
+                        <a href="#" class="btn-acao btn-excluir">Excluir</a>
+                    </td>
+                </tr>
+                {# Fim do loop #}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="listar-produto-actions">
+        <a href="{% url 'editar_produto' %}" class="btn-adicionar">Adicionar Produto</a>
+        <a href="{% url 'painel_cantineiro' %}" class="btn-voltar">Voltar ao Painel</a>
+    </div>
+</div>
+{% endblock %}

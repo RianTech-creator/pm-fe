@@ -1,33 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    Status do Pedido
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+{% endblock %}
+
 {% block body_class %}
     status-pedido-body
 {% endblock %}
 
-{% block title %}
-    Pedidos Recebidos
-{% endblock %}
-
-{% block header %}
-
-{% endblock %}
-
 {% block content %}
-<!-- A top-bar está DENTRO do body que tem o layout flex -->
-<div class="top-bar">
-    <h1>Status do Pedido</h1>
-</div>
-
-<div class="order-list-container">
-    <!-- Lista de pedidos aqui -->
-</div>
-
-{% endblock %}
-
-{% block footer %}
-    <div class="footer-container">
-        <!-- O ideal é que este botão seja um link para a página do painel -->
-        <a href="{% url 'painel_cantineiro' %}" class="btn-animated">Voltar ao painel</a>
+    <!-- Top bar com o título da página -->
+    <div class="top-bar">
+        <h1>Status do Pedido</h1>
     </div>
+
+    <!-- Container principal para o conteúdo, similar ao da home -->
+    <div class="home-content">
+        <div class="descrition-home">
+            <h2>Acompanhe seu pedido em tempo real!</h2>
+            <p class="descrition-home-p">
+                Seu pedido está sendo preparado e logo sairá para entrega.
+            </p>
+        </div>
+
+        <!-- Lista de status do pedido -->
+        <ul class="order-list">
+            <li><strong>Pedido:</strong> #001</li>
+            <li><strong>Cliente:</strong> Fulano de Tal</li>
+            <li><strong>Status:</strong> Em preparação</li>
+            <li><strong>Itens:</strong> 1x Salgado, 1x Refrigerante</li>
+        </ul>
+    </div>
+
+    <!-- Botão para voltar ao painel -->
+    <div class="home-actions">
+        <a href="{% url 'painel_cantineiro' %}" class="back-button">Voltar ao Painel</a>
+    </div>
+
 {% endblock %}

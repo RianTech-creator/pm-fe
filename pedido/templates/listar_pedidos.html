@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body_class %}
+    listar-pedidos-body
+{% endblock %}
+
+{% block title %}
+    Listar Pedidos
+{% endblock %}
+
+{% block content %}
+    <h1 class="listar-pedidos-title">Pedidos Ativos</h1>
+
+    <div class="pedidos-list-container">
+
+        <!-- Exemplo estático de um pedido para visualização -->
+        <ul class="pedidos-list">
+            <li class="pedido-item">
+                <div class="pedido-info">
+                    Pedido #1024 - Status: <strong>Em preparação</strong>
+                </div>
+                <div class="pedido-actions">
+                    <a href="{% url 'detalhes_pedido' %}">Ver Detalhes</a>
+                    <a href="{% url 'status_pedido' %}">Atualizar Status</a>
+                </div>
+            </li>
+            <!-- Você pode adicionar mais <li> aqui para ver como uma lista maior se parece -->
+        </ul>
+
+        <!-- 
+            O bloco abaixo foi removido temporariamente para exibir o exemplo.
+            Ele mostra uma mensagem quando a lista de pedidos do backend está vazia.
+            <div class="pedido-empty">
+                <p>Nenhum pedido encontrado no momento.</p>
+            </div>
+        -->
+    </div>
+
+    <!-- Botão para voltar ao painel principal -->
+    <div class="back-to-painel">
+        {# Adapte o 'href' para a URL correta do seu painel #}
+        <a href="#"><button>Voltar ao Painel</button></a>
+    </div>
+{% endblock %}
