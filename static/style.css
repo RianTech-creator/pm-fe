@@ -737,6 +737,66 @@ button {
     color: #fff;
 }
 
+/* --- Estilos da Página de Deletar Conta --- */
+
+/* 1. Body da página */
+.deletar-conta-body {
+    background-color: var(--neon-color);
+    animation: rgb-screen-border-animation 7s linear infinite;
+    /* display, justify-content, align-items são herdados do estilo global do body */
+}
+
+/* 2. Container principal */
+.deletar-conta-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    color: var(--secondary-color);
+    text-align: center;
+    animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+/* 3. Título */
+.deletar-conta-title {
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* 4. Texto de aviso */
+.deletar-conta-warning {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.deletar-conta-warning strong {
+    color: #cc0000; /* Vermelho para dar ênfase ao perigo */
+    font-weight: 600;
+}
+
+/* 5. Seção dos botões */
+.deletar-conta-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Botão de exclusão (vermelho) */
+.btn-delete-confirm {
+    background-color: #dc3545; /* Vermelho para ação destrutiva */
+    animation: none; /* Remove a animação RGB para se destacar */
+}
+.btn-delete-confirm:hover {
+    background-color: #c82333; /* Vermelho mais escuro no hover */
+}
+
 /* --- Estilos da Página de Perfil --- */
 
 /* 1. Corpo da página de perfil */
@@ -1701,4 +1761,115 @@ button {
 .btn-adicionar:hover, .btn-voltar:hover {
     background-color: #003366;
     color: #fff;
+}
+
+/* --- Estilos da Página de Deletar Conta (Baseado no HTML fornecido) --- */
+
+/* 1. Ajusta o container .wrapper para ter altura automática nesta página */
+.delete-page .wrapper {
+    height: auto; /* Remove a altura fixa de 500px */
+    padding: 40px; /* Adiciona um padding interno */
+}
+
+/* 2. Estilo para o parágrafo de aviso */
+.delete-warning-text {
+    text-align: center;
+    margin: -10px 0 25px 0; /* Ajusta margens para ficar bom entre o título e os botões */
+    color: var(--secondary-color); /* Cor preta para ser legível no fundo branco */
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+/* 3. Container para os botões de ação */
+.delete-buttons {
+    display: flex;
+    flex-direction: column; /* Coloca os botões um sobre o outro */
+    gap: 15px; /* Espaço entre os botões */
+}
+
+/* 4. Estilo para o botão de cancelar (<a>) */
+.btn-cancel {
+    display: block; /* Faz o link se comportar como um bloco */
+    width: 100%;
+    height: 45px;
+    line-height: 45px; /* Centraliza o texto verticalmente */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #6c757d; /* Cor cinza para ação secundária */
+    color: var(--primary-color); /* Texto branco */
+    transition: background-color 0.3s ease;
+}
+.btn-cancel:hover {
+    background-color: #5a6268; /* Cinza mais escuro no hover */
+}
+
+/* --- Estilos da Página de Deletar Produto --- */
+
+/* 1. Body da página */
+.deletar-produto-body {
+    background-color: var(--neon-color);
+    animation: rgb-screen-border-animation 7s linear infinite;
+    /* display, justify-content, align-items são herdados do estilo global do body */
+}
+
+/* 2. Container principal */
+.deletar-produto-container {
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    background-color: var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+    color: var(--secondary-color);
+    text-align: center;
+    animation: rgb-border-shadow-animation 20s linear infinite;
+}
+
+/* 3. Título */
+.deletar-produto-title {
+    color: var(--secondary-color);
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* 4. Conteúdo e texto de aviso */
+.deletar-produto-content p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.deletar-produto-content .aviso {
+    color: #cc0000; /* Vermelho para dar ênfase ao perigo */
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+/* 5. Formulário com os botões */
+.deletar-produto-form {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Alinha os botões verticalmente */
+    gap: 20px;
+}
+
+/* Estilo específico para o botão de exclusão na página de deletar produto */
+.deletar-produto-form .btn-excluir {
+  background-color: #c82333; /* Um vermelho mais forte para destaque */
+  animation: none; /* Remove a animação para manter a cor sólida */
+}
+
+.deletar-produto-form .btn-cancelar {
+  background-color: #333;
+}
+
+/* Garante que ambos os botões tenham o mesmo tamanho */
+.deletar-produto-form .btn-excluir,
+.deletar-produto-form .btn-cancelar {
+  width: 120px; /* Define uma largura fixa */
+  padding: 10px 0; /* Ajusta o padding vertical */
 }

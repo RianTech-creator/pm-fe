@@ -17,6 +17,7 @@
             <h2>Bem-vindo ao seu painel, Usuário!</h2>
             <p>O que você deseja fazer?</p>
             <div class="painel-buttons">
+                <a href="{% url 'usuario_perfil' %}" class="btn-animated">Visualizar Perfil</a>
                 <a href="{% url 'criar_pedido' %}" class="btn-animated">Ver Cardápio</a>
                 <a href="{% url 'listar_pedidos' %}" class="btn-animated">Ver Carrinho</a>
                 <a href="{% url 'historico_pedidos' %}" class="btn-animated">Histórico</a>

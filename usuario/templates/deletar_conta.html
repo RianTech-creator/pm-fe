@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body_class %}
+    login-register-body delete-page
+{% endblock %}
+
+{% block title %}
+    Confirmar Exclusão de Conta
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper">
+        <form method="POST" action="{% url 'deletar_usuario' %}">
+            {% csrf_token %}
+            <h2 class="title-cadastro" style="margin-bottom: 20px;">Excluir Conta</h2>
+            <p class="delete-warning-text">
+                Você tem certeza que deseja excluir sua conta permanentemente? Esta ação não pode ser desfeita.
+            </p>
+            <!-- O botão de exclusão já usa a classe .btn-delete, que existe e é vermelha -->
+            <div class="delete-buttons">
+                <button type="submit" class="btn-delete">Sim, excluir</button>
+                <a href="{% url 'usuario_perfil' %}" class="btn-cancel">Cancelar</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    Projeto Cantina - 2025
+{% endblock %}
